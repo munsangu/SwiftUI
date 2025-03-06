@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16AD47142D79B7D900B3A8DF /* AnyTransition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD47002D79B7D900B3A8DF /* AnyTransition+Extensions.swift */; };
+		16AD47152D79B7D900B3A8DF /* CodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD47022D79B7D900B3A8DF /* CodeType.swift */; };
+		16AD47162D79B7D900B3A8DF /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD47032D79B7D900B3A8DF /* TextFieldStyle.swift */; };
+		16AD47172D79B7D900B3A8DF /* TypingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD47042D79B7D900B3A8DF /* TypingState.swift */; };
+		16AD47182D79B7D900B3A8DF /* VerificationFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD47082D79B7D900B3A8DF /* VerificationFieldViewModel.swift */; };
+		16AD47192D79B7D900B3A8DF /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD470A2D79B7D900B3A8DF /* CharacterView.swift */; };
+		16AD471A2D79B7D900B3A8DF /* SegmentedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD470B2D79B7D900B3A8DF /* SegmentedPickerView.swift */; };
+		16AD471B2D79B7D900B3A8DF /* VerificationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD470D2D79B7D900B3A8DF /* VerificationField.swift */; };
+		16AD471C2D79B7D900B3A8DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD47112D79B7D900B3A8DF /* ContentView.swift */; };
+		16AD471D2D79B7D900B3A8DF /* OTPTextFieldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD47122D79B7D900B3A8DF /* OTPTextFieldApp.swift */; };
+		16AD471E2D79B7D900B3A8DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD47062D79B7D900B3A8DF /* Preview Assets.xcassets */; };
+		16AD471F2D79B7D900B3A8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD47102D79B7D900B3A8DF /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16AD46D12D79A00E00B3A8DF /* OTPTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16AD47002D79B7D900B3A8DF /* AnyTransition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extensions.swift"; sourceTree = "<group>"; };
+		16AD47022D79B7D900B3A8DF /* CodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeType.swift; sourceTree = "<group>"; };
+		16AD47032D79B7D900B3A8DF /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
+		16AD47042D79B7D900B3A8DF /* TypingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingState.swift; sourceTree = "<group>"; };
+		16AD47062D79B7D900B3A8DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16AD47082D79B7D900B3A8DF /* VerificationFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationFieldViewModel.swift; sourceTree = "<group>"; };
+		16AD470A2D79B7D900B3A8DF /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		16AD470B2D79B7D900B3A8DF /* SegmentedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerView.swift; sourceTree = "<group>"; };
+		16AD470D2D79B7D900B3A8DF /* VerificationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationField.swift; sourceTree = "<group>"; };
+		16AD47102D79B7D900B3A8DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16AD47112D79B7D900B3A8DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		16AD47122D79B7D900B3A8DF /* OTPTextFieldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16AD46CE2D79A00E00B3A8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16AD46C82D79A00E00B3A8DF = {
+			isa = PBXGroup;
+			children = (
+				16AD47132D79B7D900B3A8DF /* OTPTextField */,
+				16AD46D22D79A00E00B3A8DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16AD46D22D79A00E00B3A8DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16AD46D12D79A00E00B3A8DF /* OTPTextField.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16AD47012D79B7D900B3A8DF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				16AD47002D79B7D900B3A8DF /* AnyTransition+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		16AD47052D79B7D900B3A8DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16AD47022D79B7D900B3A8DF /* CodeType.swift */,
+				16AD47032D79B7D900B3A8DF /* TextFieldStyle.swift */,
+				16AD47042D79B7D900B3A8DF /* TypingState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16AD47072D79B7D900B3A8DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				16AD47062D79B7D900B3A8DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16AD47092D79B7D900B3A8DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				16AD47082D79B7D900B3A8DF /* VerificationFieldViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		16AD470C2D79B7D900B3A8DF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				16AD470A2D79B7D900B3A8DF /* CharacterView.swift */,
+				16AD470B2D79B7D900B3A8DF /* SegmentedPickerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		16AD470E2D79B7D900B3A8DF /* VerificationField */ = {
+			isa = PBXGroup;
+			children = (
+				16AD470D2D79B7D900B3A8DF /* VerificationField.swift */,
+			);
+			path = VerificationField;
+			sourceTree = "<group>";
+		};
+		16AD470F2D79B7D900B3A8DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16AD470C2D79B7D900B3A8DF /* Components */,
+				16AD470E2D79B7D900B3A8DF /* VerificationField */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16AD47132D79B7D900B3A8DF /* OTPTextField */ = {
+			isa = PBXGroup;
+			children = (
+				16AD47052D79B7D900B3A8DF /* Model */,
+				16AD47092D79B7D900B3A8DF /* ViewModel */,
+				16AD470F2D79B7D900B3A8DF /* View */,
+				16AD47012D79B7D900B3A8DF /* Extension */,
+				16AD47072D79B7D900B3A8DF /* Preview Content */,
+				16AD47102D79B7D900B3A8DF /* Assets.xcassets */,
+				16AD47112D79B7D900B3A8DF /* ContentView.swift */,
+				16AD47122D79B7D900B3A8DF /* OTPTextFieldApp.swift */,
+			);
+			path = OTPTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16AD46D02D79A00E00B3A8DF /* OTPTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16AD46DF2D79A00F00B3A8DF /* Build configuration list for PBXNativeTarget "OTPTextField" */;
+			buildPhases = (
+				16AD46CD2D79A00E00B3A8DF /* Sources */,
+				16AD46CE2D79A00E00B3A8DF /* Frameworks */,
+				16AD46CF2D79A00E00B3A8DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTPTextField;
+			packageProductDependencies = (
+			);
+			productName = OTPTextField;
+			productReference = 16AD46D12D79A00E00B3A8DF /* OTPTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16AD46C92D79A00E00B3A8DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					16AD46D02D79A00E00B3A8DF = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 16AD46CC2D79A00E00B3A8DF /* Build configuration list for PBXProject "OTPTextField" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16AD46C82D79A00E00B3A8DF;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 16AD46D22D79A00E00B3A8DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16AD46D02D79A00E00B3A8DF /* OTPTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16AD46CF2D79A00E00B3A8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16AD471E2D79B7D900B3A8DF /* Preview Assets.xcassets in Resources */,
+				16AD471F2D79B7D900B3A8DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16AD46CD2D79A00E00B3A8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16AD47142D79B7D900B3A8DF /* AnyTransition+Extensions.swift in Sources */,
+				16AD47152D79B7D900B3A8DF /* CodeType.swift in Sources */,
+				16AD47162D79B7D900B3A8DF /* TextFieldStyle.swift in Sources */,
+				16AD47172D79B7D900B3A8DF /* TypingState.swift in Sources */,
+				16AD47182D79B7D900B3A8DF /* VerificationFieldViewModel.swift in Sources */,
+				16AD47192D79B7D900B3A8DF /* CharacterView.swift in Sources */,
+				16AD471A2D79B7D900B3A8DF /* SegmentedPickerView.swift in Sources */,
+				16AD471B2D79B7D900B3A8DF /* VerificationField.swift in Sources */,
+				16AD471C2D79B7D900B3A8DF /* ContentView.swift in Sources */,
+				16AD471D2D79B7D900B3A8DF /* OTPTextFieldApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		16AD46DD2D79A00F00B3A8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16AD46DE2D79A00F00B3A8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16AD46E02D79A00F00B3A8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OTPTextField/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroDaegu.OTPTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16AD46E12D79A00F00B3A8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OTPTextField/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroDaegu.OTPTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16AD46CC2D79A00E00B3A8DF /* Build configuration list for PBXProject "OTPTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16AD46DD2D79A00F00B3A8DF /* Debug */,
+				16AD46DE2D79A00F00B3A8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16AD46DF2D79A00F00B3A8DF /* Build configuration list for PBXNativeTarget "OTPTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16AD46E02D79A00F00B3A8DF /* Debug */,
+				16AD46E12D79A00F00B3A8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16AD46C92D79A00E00B3A8DF /* Project object */;
+}
