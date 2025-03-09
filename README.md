@@ -118,3 +118,36 @@ SwiftUI, MVVM, TabBar
 - 様々なiOSバージョンの互換性処理
 
 </details>
+
+## [CreditCardInputForm](https://github.com/munsangu/SwiftUI/tree/master/CreditCardInputForm)
+
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+
+<p align="center"><img src="https://github.com/user-attachments/assets/39fcd2d1-8aee-48c8-b415-4f6d74fd3a5c"></p>
+<p align="center">
+SwiftUI, Animation, 3D Effects
+</p>
+
+### 主な機能:
+- インタラクティブなクレジットカード入力フォーム
+- カード表面と裏面の3Dフリップアニメーション
+- フォーカスされたフィールドに基づいたカード表示の動的な更新
+- メッシュグラデーションを使用したリアルなカードデザイン
+- フィールドごとのアニメーション強調表示
+
+### 実装の詳細:
+- `Card`モデルを使用したカード情報の管理
+- カスタム`FlipTransition`モディファイアによる3D回転効果
+- `rotation3DEffect`を用いたカードフリップアニメーション
+- `FocusState`を活用した入力フィールド間のフォーカス管理
+- カスタム文字列拡張機能による自動フォーマット処理（空白挿入、マスク化）
+
+### 活用技術:
+- SwiftUI 3Dアニメーションと遷移効果
+- カスタムViewModifierによるトランジション実装
+- 文字列操作のための拡張機能
+- `matchedTransitionSource`によるフォーカスリングのアニメーション
+- `contentTransition(.numericText())`による数値変更アニメーション
+
+</details>
