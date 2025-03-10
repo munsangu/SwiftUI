@@ -151,3 +151,32 @@ SwiftUI, Animation, 3D Effects
 - `contentTransition(.numericText())`による数値変更アニメーション
 
 </details>
+
+## [InteractiveFloatingActionButton](https://github.com/munsangu/SwiftUI/tree/master/InteractiveFloatingActionButton)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/10f4c19c-d732-4580-8dbe-8bc3e37da1ed"></p>
+<p align="center">
+SwiftUI, MVVM, GestureRecognizers
+</p>
+
+### 主な機能:
+- ドラッグ可能な浮動アクションボタン
+- 展開可能なアクションメニュー
+- カスタマイズ可能なアクションアイコンとアニメーション
+- ジェスチャー認識による直感的な操作体験
+
+### 実装の詳細:
+- MVVMアーキテクチャによるコード設計
+- 長押しと同時ドラッグジェスチャーの組み合わせ
+- SwiftUIのアニメーションシステムを活用した滑らかな遷移
+- カスタムCoordinateSpaceを用いた位置検出
+- ResultBuilderパターンによる宣言的なAPI設計
+
+### 活用技術:
+- SwiftUIの最新機能を活用したUI構築
+- ジェスチャー認識と処理
+- カスタムビュー修飾子とアニメーション
+- ビジネスロジックの分離とテスト容易性の向上
+</details>
+
