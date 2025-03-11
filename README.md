@@ -180,7 +180,7 @@ SwiftUI, MVVM, GestureRecognizers
 - ビジネスロジックの分離とテスト容易性の向上
 </details>
 
-## [ResponsiveChipsSlection](https://github.com/munsangu/SwiftUI/tree/master/ResponsiveChipsSlection/ResponsiveChipsSlection)
+## [ResponsiveChipsSelection](https://github.com/munsangu/SwiftUI/tree/master/ResponsiveChipsSelection/ResponsiveChipsSelection)
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
 <p align="center"><img src="https://github.com/user-attachments/assets/0e9f4294-338c-45bd-8b7f-744ca9ece12b"></p>
