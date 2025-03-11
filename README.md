@@ -1,6 +1,6 @@
 # SwiftUI Projects
 
-## [AppShortcuts](https://github.com/munsangu/SwiftUI/tree/master/AppShortcuts)
+## [AppShortcuts](https://github.com/munsangu/SwiftUI/tree/master/AppShortcuts/AppShortcuts)
 
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
@@ -29,7 +29,7 @@ SwiftUI, SwiftData, AppIntents
 
 </details>
 
-## [OTPTextField](https://github.com/munsangu/SwiftUI/tree/master/OTPTextField)
+## [OTPTextField](https://github.com/munsangu/SwiftUI/tree/master/OTPTextField/OTPTextField)
 
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
@@ -60,7 +60,7 @@ SwiftUI, MVVM, TextField
 
 </details>
 
-## [FloatingBottomSheets](https://github.com/munsangu/SwiftUI/tree/master/FloatingBottomSheets)
+## [FloatingBottomSheets](https://github.com/munsangu/SwiftUI/tree/master/FloatingBottomSheets/FloatingBottomSheets)
 
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
@@ -89,7 +89,7 @@ SwiftUI, MVVM, Sheet
 
 </details>
 
-## [InteractiveTabBar](https://github.com/munsangu/SwiftUI/tree/master/InteractiveTabBar)
+## [InteractiveTabBar](https://github.com/munsangu/SwiftUI/tree/master/InteractiveTabBar/InteractiveTabBar)
 
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
@@ -119,7 +119,7 @@ SwiftUI, MVVM, TabBar
 
 </details>
 
-## [CreditCardInputForm](https://github.com/munsangu/SwiftUI/tree/master/CreditCardInputForm)
+## [CreditCardInputForm](https://github.com/munsangu/SwiftUI/tree/master/CreditCardInputForm/CreditCardInputForm)
 
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
@@ -152,7 +152,7 @@ SwiftUI, Animation, 3D Effects
 
 </details>
 
-## [InteractiveFloatingActionButton](https://github.com/munsangu/SwiftUI/tree/master/InteractiveFloatingActionButton)
+## [InteractiveFloatingActionButton](https://github.com/munsangu/SwiftUI/tree/master/InteractiveFloatingActionButton/InteractiveFloatingActionButton)
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
 <p align="center"><img src="https://github.com/user-attachments/assets/10f4c19c-d732-4580-8dbe-8bc3e37da1ed"></p>
@@ -180,3 +180,32 @@ SwiftUI, MVVM, GestureRecognizers
 - ビジネスロジックの分離とテスト容易性の向上
 </details>
 
+## [ResponsiveChipsSlection](https://github.com/munsangu/SwiftUI/tree/master/ResponsiveChipsSlection/ResponsiveChipsSlection)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/0e9f4294-338c-45bd-8b7f-744ca9ece12b"></p>
+<p align="center">
+SwiftUI, MVVM, ResponsiveLayout
+</p>
+
+### 主な機能:
+- レスポンシブなチップ選択UIコンポーネント
+- 動的グリッドレイアウトの実装
+- アニメーション付き選択状態表示
+- 複数選択機能のサポート
+- カスタムレイアウトシステムの活用
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- SwiftUIのLayoutプロトコルを活用したカスタムチップレイアウト
+- ObservableObjectによる状態管理
+- ジェネリクスを活用した柔軟なコンテンツ構成
+- アニメーションとトランジション効果を適用したインタラクション
+
+### 活用技術:
+- SwiftUIの最新機能を活用したUI開発
+- カスタムレイアウトアルゴリズムの実装
+- 状態管理およびデータバインディング
+- 再利用可能なコンポーネント設計
+- 拡張可能なアーキテクチャ構造
+</details>
