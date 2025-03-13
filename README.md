@@ -239,3 +239,33 @@ SwiftUI, MVVM, カスタムコンポーネント
 - 再利用可能なコンポーネント設計
 - 拡張可能なアーキテクチャ構造
 </details>
+
+## [CoverFlow](https://github.com/munsangu/SwiftUI/tree/master/CoverFlow/CoverFlow)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/9a423e71-612b-498f-842d-5252b28ca7bc"></p>
+<p align="center">
+SwiftUI, MVVM, カスタムコンポーネント
+</p>
+
+### 主な機能:
+- ドラッグ時に拡張するインタラクティブスライダーコンポーネント
+- カスタマイズ可能なデザイン設定
+- スムーズなアニメーショントランジション効果
+- 直感的なユーザーインターフェース
+- 再利用可能なコンポーネント設計
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- SwiftUIのGeometryReaderを活用したサイズベースのレイアウト
+- ObservableObjectによる状態管理
+- ジェネリクスを活用した柔軟なオーバーレイコンテンツ構成
+- アニメーションとトランジション効果を適用したインタラクション
+
+### 活用技術:
+- SwiftUIの最新機能を活用したUI開発
+- ジェスチャー認識および処理システムの実装
+- 状態管理およびデータバインディング
+- 再利用可能なコンポーネント設計
+- 拡張可能なアーキテクチャ構造
+</details>
