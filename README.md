@@ -269,3 +269,33 @@ SwiftUI, MVVM, カスタムコンポーネント
 - 再利用可能なコンポーネント設計
 - 拡張可能なアーキテクチャ構造
 </details>
+
+## [AnimatedChart](https://github.com/munsangu/SwiftUI/tree/master/AnimatedChart/AnimatedChart)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/acdc63c9-987e-4a11-bab0-2e3b3a8387fc"></p>
+<p align="center">
+SwiftUI, MVVM, Charts, アニメーション
+</p>
+
+### 主な機能:
+- 複数のチャートタイプ（棒グラフ、折れ線グラフ、円グラフ）の切り替え
+- スムーズなデータアニメーション効果
+- インタラクティブなチャートデータ更新
+- 直感的なユーザーインターフェース
+- 再利用可能なチャートコンポーネント
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- SwiftUI Chartsフレームワークを活用したデータビジュアライゼーション
+- ObservableObjectによる状態管理
+- コンポーネント別のモジュラー設計
+- 順次的なアニメーションとトランジション効果
+
+### 活用技術:
+- SwiftUI Chartsによるデータビジュアライゼーション
+- スプリングアニメーションによる自然な動きの実現
+- カスタマイズ可能なチャート表示オプション
+- 再利用可能なコンポーネント設計
+- 拡張可能なアーキテクチャ構造
+</details>
