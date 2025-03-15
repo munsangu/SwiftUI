@@ -299,3 +299,33 @@ SwiftUI, MVVM, Charts, アニメーション
 - 再利用可能なコンポーネント設計
 - 拡張可能なアーキテクチャ構造
 </details>
+
+## [CustomKeyboard](https://github.com/munsangu/SwiftUI/tree/master/CustomKeyboard/CustomKeyboard)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/ee653073-0924-4790-95b2-5fdbee59ca61"></p>
+<p align="center">
+SwiftUI, MVVM, カスタムキーボード, UIViewControllerRepresentable
+</p>
+
+### 主な機能:
+- ネイティブなUIとマッチしたカスタムキーボードの実装
+- 数字入力用の専用キーボードインターフェース
+- スマートな入力フィールドとキーボードの連携
+- ピンコード入力に最適化されたデザイン
+- 直感的な操作体験の提供
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- UIViewControllerRepresentableを活用したUIKitとSwiftUIの統合
+- カスタムキーボードの自然な挙動の実現
+- コンポーネント分離による再利用性の向上
+- FocusStateを用いたキーボード状態管理
+
+### 活用技術:
+- SwiftUIとUIKitの橋渡しとなるUIViewControllerRepresentable
+- シャドウ効果とモダンなUIデザイン
+- カスタムコンポーネントの分離と再利用
+- コールバックパターンによるView間の通信
+- クリーンなMVVMアーキテクチャの実装
+</details>
