@@ -329,3 +329,34 @@ SwiftUI, MVVM, カスタムキーボード, UIViewControllerRepresentable
 - コールバックパターンによるView間の通信
 - クリーンなMVVMアーキテクチャの実装
 </details>
+
+## [CompositionalGridLayout](https://github.com/munsangu/SwiftUI/tree/master/CompositionalGridLayout/CompositionalGridLayout)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/d9dcdeef-ae4c-4e5e-af24-a716e66959f2"></p>
+<p align="center">
+SwiftUI, MVVM, コンポジショナルグリッドレイアウト, アニメーション
+</p>
+
+### 主な機能:
+- 様々なレイアウトパターンを含む複合的なグリッドの実装
+- 動的に列数を変更できるインターフェース
+- レイアウト変更時の滑らかなアニメーション効果
+- 多様なグリッドパターン（1+2、水平、1+垂直、など）
+- 再利用可能なコンポーネント設計
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- GroupとGeometryReaderを活用した複合レイアウトの実装
+- matchedGeometryEffectを活用した滑らかな遷移アニメーション
+- コンポーネント分離によるコードの再利用性向上
+- 宣言的UIを実現するためのSwiftUIの活用
+
+### 活用技術:
+- SwiftUIの宣言的UIフレームワーク
+- 複合的なレイアウトのためのLazyVStackおよびHStack
+- 動的レイアウト生成のためのGeometryReader
+- アニメーションのためのNamespaceとmatchedGeometryEffect
+- Observableパターンを活用した状態管理
+- 拡張性のあるMVVMアーキテクチャの実装
+</details>
