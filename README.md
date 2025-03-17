@@ -360,3 +360,34 @@ SwiftUI, MVVM, コンポジショナルグリッドレイアウト, アニメー
 - Observableパターンを活用した状態管理
 - 拡張性のあるMVVMアーキテクチャの実装
 </details>
+
+## [ParticleEffect](https://github.com/munsangu/SwiftUI/tree/master/ParticleEffect/ParticleEffect)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/8512ea90-35f4-4ca7-a491-bb5a7629fa19"></p>
+<p align="center">
+SwiftUI, MVVM, パーティクルアニメーション, インタラクティブUI
+</p>
+
+### 主な機能:
+- インタラクティブなボタン操作のためのパーティクルエフェクト実装
+- ボタン状態変更に応じた動的パーティクルアニメーション
+- カスタマイズ可能なカラーテーマとアイコン
+- 滑らかなスプリングアニメーション効果
+- 再利用可能なコンポーネントデザイン
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- パーティクル生成とアニメーションのためのビューモデルロジック分離
+- カスタムボタンコンポーネントによるコード再利用性の向上
+- SwiftUIのアニメーションAPIを活用した滑らかな遷移効果
+- 状態変化に応じた動的UI更新
+
+### 活用技術:
+- SwiftUIの宣言的UIフレームワーク
+- MVVMパターンによるビジネスロジックとUIの分離
+- 状態管理のためのObservableパターン活用
+- 複雑なアニメーションのためのwithAnimation API
+- 再利用可能なコンポーネントのためのViewBuilder活用
+- インタラクティブなユーザー体験のためのボタンとジェスチャー実装
+</details>
