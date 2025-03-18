@@ -391,3 +391,35 @@ SwiftUI, MVVM, パーティクルアニメーション, インタラクティブ
 - 再利用可能なコンポーネントのためのViewBuilder活用
 - インタラクティブなユーザー体験のためのボタンとジェスチャー実装
 </details>
+
+## [Toast](https://github.com/munsangu/SwiftUI/tree/master/Toast/Toast)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/99bf5954-499d-4754-affc-2fd9a58c6690"></p>
+<p align="center">
+SwiftUI, MVVM, インタラクティブトースト, アダプティブUI
+</p>
+
+### 主な機能:
+- 様々なタイプのトーストメッセージ対応 (Error, Success, Warning, Apple Like HUD)
+- トーストメッセージの展開/縮小インタラクティブ機能
+- スワイプによるトースト削除機能
+- 複数のトーストメッセージのスタック管理システム
+- トーストタイプに応じたアダプティブレイアウト
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- トースト生成と管理のためのビューモデルロジック分離
+- トーストコンポーネントの再利用性向上のための設計
+- SwiftUIのアニメーションAPIを活用した滑らかな遷移効果
+- 状態変化に応じた動的UI更新
+
+### 活用技術:
+- SwiftUIの宣言的UIフレームワーク
+- MVVMパターンによるビジネスロジックとUIの分離
+- 状態管理のためのObservableパターン活用
+- 複雑なアニメーションのためのwithAnimation API
+- 再利用可能なコンポーネントのためのViewBuilder活用
+- インタラクティブなユーザー体験のためのジェスチャー実装
+- AnyLayoutを活用した動的レイアウト切替
+</details>
