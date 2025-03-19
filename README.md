@@ -423,3 +423,35 @@ SwiftUI, MVVM, インタラクティブトースト, アダプティブUI
 - インタラクティブなユーザー体験のためのジェスチャー実装
 - AnyLayoutを活用した動的レイアウト切替
 </details>
+
+## [AsyncButton](https://github.com/munsangu/SwiftUI/tree/master/AsyncButton/AsyncButton)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/d4cd3672-6ca6-491a-9229-9394c101c1d2"></p>
+<p align="center">
+SwiftUI, MVVM, 非同期処理, アニメーションボタン
+</p>
+
+### 主な機能:
+- トランザクション状態に応じた動的なボタン表示切替
+- 非同期処理中のローディングインジケーター表示
+- 状態ごとの色とアイコン変更による視覚的フィードバック
+- タップ時の洗練されたスケールアニメーション効果
+- 再利用可能なコンポーネント設計
+
+### 実装の詳細:
+- MVVMアーキテクチャパターンによるコード構造化
+- トランザクション状態管理のためのビューモデルロジック分離
+- 非同期処理をSwift Concurrencyモデルで実装
+- カスタムスピナーコンポーネントによるローディング表示
+- 異なる状態間の滑らかなトランジション
+
+### 活用技術:
+- SwiftUIの宣言的UIフレームワーク
+- MVVMパターンによるビジネスロジックとUIの分離
+- Swift Concurrencyを活用した非同期処理
+- 状態管理のためのObservableパターン活用
+- 複雑なアニメーションのための.animation修飾子
+- カスタムボタンスタイルによるインタラクティブ効果
+- 再利用可能なコンポーネント設計
+</details>
