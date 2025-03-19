@@ -424,7 +424,7 @@ SwiftUI, MVVM, インタラクティブトースト, アダプティブUI
 - AnyLayoutを活用した動的レイアウト切替
 </details>
 
-## [AsyncButton](https://github.com/munsangu/SwiftUI/tree/master/AsyncButton/AsyncButton)
+## [AsyncButton](https://github.com/munsangu/SwiftUI/tree/master/AnimatedStateButton/AnimatedStateButton)
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
 <p align="center"><img src="https://github.com/user-attachments/assets/d4cd3672-6ca6-491a-9229-9394c101c1d2"></p>
