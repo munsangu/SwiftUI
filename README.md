@@ -488,3 +488,36 @@ SwiftUI, MVVM, アニメーション, ローリングカウンター
 - アニメーションタイミングの精密な調整
 - 再利用可能なコンポーネント設計パターン
 </details>
+
+## [DisintegrationEffect](https://github.com/munsangu/SwiftUI/tree/master/DisintegrationEffect/DisintegrationEffect)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/c428e773-2e9a-4125-8029-a12382a98ef4"></p>
+<p align="center">
+SwiftUI, MVVM, アニメーション, 分解エフェクト
+</p>
+
+### 主な機能:
+- タップ操作による要素の分解・再構成アニメーション
+- パーティクルベースの高度なビジュアルエフェクト
+- スムーズな遷移と自然な動きを実現するアニメーション
+- カスタマイズ可能な分解・再構成エフェクト
+- エンタープライズレベルのMVVMアーキテクチャ実装
+
+### 実装の詳細:
+- MVVMアーキテクチャによるコードの明確な分離
+- UIKitとSwiftUIの連携によるスナップショット機能
+- パーティクルシステムによる複雑なアニメーション制御
+- ビューの分解・再構成を実現する高度なアルゴリズム
+- マルチスレッド処理による高パフォーマンスの実現
+
+### 活用技術:
+- SwiftUIフレームワークによる宣言的UI実装
+- カスタムビューモディファイアによる再利用可能なエフェクト
+- GCD（Grand Central Dispatch）とTaskによる非同期処理
+- UIGraphicsImageRendererを活用した画像処理
+- 階層的プロジェクト構造による保守性の向上
+- アニメーションタイミングの精密な調整
+- パーティクルベースのビジュアルエフェクト実装
+- 再利用可能なコンポーネント設計パターン
+</details>
