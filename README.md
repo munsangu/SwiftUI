@@ -630,3 +630,44 @@ SwiftUI, MVVM, アニメーション, 円形カード配置, 視覚効果
 - カラーグラデーションによる視覚的エンゲージメントの向上
 - エンタープライズ品質のコード構造と分離
 </details>
+
+## [VisionOSMenuBar](https://github.com/munsangu/SwiftUI/tree/master/VisionOSMenuBar/VisionOSMenuBar)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b7aff230-9adc-4983-a62a-9281ba3d9133">
+  <img src="https://github.com/user-attachments/assets/b3e46805-8ba8-4d75-af82-db8078864daa">
+</p>
+<p align="center">
+SwiftUI, MVVM, VisionOS風UI, アニメーション, メニューコントロール
+</p>
+
+### 主な機能:
+- VisionOS風のスタイリングとインターフェース
+- モダンなメニューコントロールシステム
+- 美しいアニメーションでの状態遷移
+- 洗練されたぼかし効果とオーバーレイ
+- 特殊な視覚効果を適用したカスタムUI要素
+- 直感的なノート管理インターフェース
+
+### 実装の詳細:
+- MVVMアーキテクチャによるクリーンな責任分離
+- ジオメトリリーダーを活用した正確な位置計算
+- カスタムViewモディファイアによる再利用可能なコンポーネント
+- 複合的な視覚効果のためのレイヤー処理
+- アニメーションの連鎖による滑らかなUI遷移
+- レスポンシブデザインによる適応型レイアウト
+- カスタムシャドウとマテリアルエフェクトの組み合わせ
+
+### 活用技術:
+- SwiftUIフレームワークによる宣言的UI実装
+- ObservableObjectによるリアクティブな状態管理
+- GeometryPreferenceを使用した高度なレイアウト調整
+- カスタム拡張機能によるSwiftUIの機能拡張
+- 階層的ビュー構造による保守性の向上
+- 定数管理による一貫したUIパラメータ
+- アクセシビリティに配慮したインターフェース設計
+- アニメーションパラメータの微調整による自然な動き
+- マテリアルデザインの原則を応用したUI要素
+- エンタープライズ品質のコード構造と明確な責任分離
+</details>
