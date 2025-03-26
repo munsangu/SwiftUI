@@ -710,3 +710,43 @@ SwiftUI, MVVM, カスタムドロップダウン, アニメーション, UI/UX�
 - 安全エリアの適切な処理
 - UIコンポーネントの再利用性向上
 </details>
+
+## [CustomYTHeader](https://github.com/munsangu/SwiftUI/tree/master/CustomYTHeader/CustomYTHeader)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/14a6bb9d-b7a4-492f-b721-950cd9969098"></p>
+<p align="center">
+SwiftUI, MVVM, スクロールアニメーション, UI/UXデザイン, YouTubeスタイルヘッダー
+</p>
+
+### 主な機能:
+- YouTubeスタイルのスクロール追従ヘッダー
+- スクロール方向に基づいた自動表示/非表示アニメーション
+- MVVMアーキテクチャによる設計
+- 効率的なスクロール位置検出と追跡
+- スケルトンローディングUI
+- スクロール停止時の自然なスナップ効果
+
+### 実装の詳細:
+- MVVMパターンによるビジネスロジックと表示の分離
+- 再利用可能なスクロール検出モディファイア
+- スクロールフェーズの変化に応じた洗練されたアニメーション
+- GeometryReaderを活用した正確な位置計算
+- カスタムExtensionによるコード再利用性の向上
+- スケルトンUIによるエレガントなローディング表現
+- コンポーネント分割による保守性の向上
+
+### 活用技術:
+- SwiftUIフレームワーク
+- ObservableObjectとStateObject
+- カスタムViewModifier
+- スクロール状態追跡と処理
+- アニメーションとトランジション
+- GeometryProxyを活用した位置計算
+- スクロールフェーズ検出
+- カスタムPreferenceKey
+- ビューコンポーネントの分離
+- 安全エリアの適切な処理
+- スケルトンローディングパターン
+- バウンス効果を考慮したオフセット計算
+</details>
