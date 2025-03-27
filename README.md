@@ -750,3 +750,44 @@ SwiftUI, MVVM, スクロールアニメーション, UI/UXデザイン, YouTube�
 - スケルトンローディングパターン
 - バウンス効果を考慮したオフセット計算
 </details>
+
+## [WaveAnimationCanvas](https://github.com/yourusername/SwiftUI/tree/master/WaveAnimationCanvas/WaveAnimationCanvas)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/46241dd9-34cd-4174-9b1e-9d6e0dc27e4d"></p>
+<p align="center">
+SwiftUI, MVVM, Canvas API, タイムラインアニメーション, 波形エフェクト
+</p>
+
+### 主な機能:
+- Canvas APIを活用した流動的な波形アニメーション
+- 複数のレイヤーによる深度と立体感の表現
+- トグルによるインタラクティブな色彩変化
+- MVVMアーキテクチャによる設計
+- 効率的なアニメーションレンダリング
+- リアルタイムの波形変化と動き
+
+### 実装の詳細:
+- MVVMパターンによるビジネスロジックと表示の分離
+- TimelineViewを活用したフレームベースアニメーション
+- Canvas APIを使用した高パフォーマンス描画
+- 再利用可能な波形コンポーネント
+- アニメーション方向の反転による重層的な視覚効果
+- Combineフレームワークを活用したデータバインディング
+- コンポーネント分割による保守性の向上
+- 色彩の透明度を活用した深度表現
+
+### 活用技術:
+- SwiftUIフレームワーク
+- Canvas APIによる高度な描画
+- TimelineViewによるアニメーション制御
+- ObservableObjectとStateObject
+- Combineによるデータフロー管理
+- 波形生成アルゴリズム
+- パスベースのグラフィック描画
+- 複数レイヤーのコンポジション
+- UIのコンポーネント化
+- 時間ベースのアニメーション計算
+- 色彩と透明度の効果的な活用
+- トグルによるインタラクティブ制御
+</details>
