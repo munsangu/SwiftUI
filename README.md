@@ -751,7 +751,7 @@ SwiftUI, MVVM, スクロールアニメーション, UI/UXデザイン, YouTube�
 - バウンス効果を考慮したオフセット計算
 </details>
 
-## [WaveAnimationCanvas](https://github.com/yourusername/SwiftUI/tree/master/WaveAnimationCanvas/WaveAnimationCanvas)
+## [WaveAnimationCanvas](https://github.com/yourusername/SwiftUI/tree/master/CanvasApp/CanvasApp)
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
 <p align="center"><img src="https://github.com/user-attachments/assets/46241dd9-34cd-4174-9b1e-9d6e0dc27e4d"></p>
