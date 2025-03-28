@@ -792,7 +792,7 @@ SwiftUI, MVVM, Canvas API, タイムラインアニメーション, 波形エフ
 - トグルによるインタラクティブ制御
 </details>
 
-## [CustomTimePicker](https://github.com/munsangu/CustomTimePicker/CustomTimePicker)
+## [CustomTimePicker](https://github.com/munsangu/SwiftUI/tree/master/CustomTimePicker/CustomTimePicker)
 
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
