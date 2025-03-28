@@ -791,3 +791,46 @@ SwiftUI, MVVM, Canvas API, タイムラインアニメーション, 波形エフ
 - 色彩と透明度の効果的な活用
 - トグルによるインタラクティブ制御
 </details>
+
+## [CustomTimePicker](https://github.com/munsangu/CustomTimePicker/CustomTimePicker)
+
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+
+<p align="center"><img src="https://github.com/user-attachments/assets/c4f633d5-0574-455c-bc35-93ebaeb9defc"></p>
+
+<p align="center">
+SwiftUI, MVVM, UIKitインテグレーション, カスタムピッカー, エンタープライズアーキテクチャ
+</p>
+
+### 主な機能:
+- カスタマイズされたホイールスタイルのタイムピッカー
+- 時間、分、秒の個別選択機能
+- UIPickerViewのインジケーターを非表示にする高度なカスタマイズ
+- MVVMアーキテクチャによる設計
+- UIKitとSwiftUIの統合
+- エンタープライズレベルのコード構造
+
+### 実装の詳細:
+- MVVMパターンによるビジネスロジックと表示の分離
+- UIViewRepresentableを活用したUIKitコンポーネントの統合
+- 再利用可能なピッカーコンポーネント
+- 明確に定義された責任分担
+- Combineフレームワークを活用したデータバインディング
+- コンポーネント分割による保守性の向上
+- 入力値の検証と制約
+
+### 活用技術:
+- SwiftUIフレームワーク
+- UIViewRepresentableによるUIKit統合
+- ObservableObjectとStateObject
+- Combineによるデータフロー管理
+- カスタムピッカーインターフェース
+- UIKitコンポーネントの拡張
+- バインディングとパブリッシャー
+- プロパティラッパーの効果的な活用
+- ViewBuilderによるカスタムコンポーネント
+- モジュール化された設計
+- 堅牢なエラー処理
+- エンタープライズレベルのドキュメンテーション
+</details>
