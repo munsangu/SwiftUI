@@ -834,3 +834,35 @@ SwiftUI, MVVM, UIKitインテグレーション, カスタムピッカー, エ�
 - 堅牢なエラー処理
 - エンタープライズレベルのドキュメンテーション
 </details>
+
+## [AppIntroAnimation](https://github.com/munsangu/SwiftUI/tree/master/AppIntroAnimation/AppIntroAnimation)
+
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+
+<p align="center"><img src="https://github.com/user-attachments/assets/1c6b9d74-469d-4d27-b1d6-805a7ebfd570"></p>
+<p align="center">
+SwiftUI, MVVM, アニメーション
+</p>
+
+### 主な機能:
+- スタイリッシュなアプリ紹介アニメーション
+- スムーズなテキストとカラートランジション効果
+- ユーザーフレンドリーなログインオプション
+- 拡張可能なMVVMアーキテクチャ
+
+### 実装の詳細:
+- `Intro`モデルを使用して、各アニメーションステートを構造化
+- `IntroViewModel`を通じたアニメーションロジックの管理
+- `withAnimation`を使用したシーケンシャルなアニメーション
+- カスタム`View`拡張によるUIコンポーネントの再利用性向上
+- コンポーネント指向設計によるコードの整理
+
+### 活用技術:
+- SwiftUIの宣言的UI構築
+- MVVMデザインパターンの実装
+- カスタムモディファイアによるUIの再利用性
+- コンプレックスなアニメーションシーケンス
+- タスクベースの非同期処理
+
+</details>
