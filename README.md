@@ -864,5 +864,34 @@ SwiftUI, MVVM, アニメーション
 - カスタムモディファイアによるUIの再利用性
 - コンプレックスなアニメーションシーケンス
 - タスクベースの非同期処理
+</details>
 
+## [AnimatedTapIcon](https://github.com/munsangu/SwiftUI/tree/master/AnimatedTapIcon/AnimatedTapIcon)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/1551cc00-e476-4e81-996c-d178e7190ba3"></p>
+<p align="center">
+SwiftUI, MVVM, シンボルエフェクト, カスタムタブバー
+</p>
+
+### 主な機能:
+- アニメーション付きカスタムタブバー
+- バウンスエフェクトの方向選択
+- 洗練されたUI/UXデザイン
+- コンポーネントベースのMVVMアーキテクチャ
+
+### 実装の詳細:
+- `Tab`モデルを使用して各タブの設定を構造化
+- `AnimatedTab`によるアニメーション状態の管理
+- `TabBarViewModel`でUIロジックを集中管理
+- `.symbolEffect`を活用したインタラクティブなアイコンアニメーション
+- 再利用可能なUIコンポーネントによる構成
+
+### 活用技術:
+- SwiftUIの宣言的UI構築
+- MVVMデザインパターンの実装
+- シンボルエフェクトAPIによるアニメーション
+- カスタムトランザクションによるアニメーション制御
+- コンポーネント指向の設計アプローチ
+- 拡張可能なアーキテクチャ構造
 </details>
