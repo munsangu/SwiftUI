@@ -895,3 +895,36 @@ SwiftUI, MVVM, シンボルエフェクト, カスタムタブバー
 - コンポーネント指向の設計アプローチ
 - 拡張可能なアーキテクチャ構造
 </details>
+
+## [AppThemeSwitcher](https://github.com/munsangu/SwiftUI/tree/master/AppThemeSwitcher/AppThemeSwitcher)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/d48633d8-c4ed-4654-8ed5-d1e949a26f9a"></p>
+<p align="center">
+SwiftUI, MVVM, テーマ切り替え, アニメーション, カスタムUI
+</p>
+
+### 主な機能:
+- ダイナミックなテーマ切り替え (システム・ライト・ダークモード)
+- アニメーション付きテーマ表示
+- スムーズなトランジションエフェクト
+- 直感的なユーザーインターフェース
+- 状態保存によるテーマ設定の永続化
+
+### 実装の詳細:
+- `Theme`列挙型による異なるテーマオプションの管理
+- `ThemeViewModel`でのUI状態と設定の一元管理
+- `@AppStorage`を活用したテーマ設定の永続化
+- `.matchedGeometryEffect`によるスムーズなトランジション
+- 明確に分離されたコンポーネントベースのビュー設計
+- アニメーション制御のための詳細な実装
+
+### 活用技術:
+- SwiftUIの宣言的UI構築
+- MVVMアーキテクチャパターンの実装
+- カスタムアニメーションとトランジション
+- SheetとPresentationモディファイアによるモーダル表示
+- 再利用可能なコンポーネント指向の設計
+- プロパティラッパーを活用した状態管理
+- 拡張性と保守性を考慮したエンタープライズレベルの設計
+</details>
