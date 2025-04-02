@@ -928,3 +928,37 @@ SwiftUI, MVVM, テーマ切り替え, アニメーション, カスタムUI
 - プロパティラッパーを活用した状態管理
 - 拡張性と保守性を考慮したエンタープライズレベルの設計
 </details>
+
+## [CustomTextFieldMenu](https://github.com/munsangu/SwiftUI/tree/master/CustomTextFieldMenu/CustomTextFieldMenu)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/5b0ea014-f912-4de4-9817-379c73965b82"></p>
+<p align="center">
+SwiftUI, MVVM, テキストフィールドカスタマイズ, UIKitブリッジング
+</p>
+
+### 主な機能:
+- テキストフィールドへのカスタムコンテキストメニュー追加
+- テキスト選択時の変換操作（大文字・小文字）
+- システム提案の表示/非表示切り替え
+- UIKitとSwiftUIのシームレスな統合
+- MVVMパターンによる構造化された設計
+
+### 実装の詳細:
+- `TextFieldAction`モデルを使用してカスタムアクションを定義
+- `TextFieldState`による効率的な状態管理
+- `ContentViewModel`でビジネスロジックを分離
+- `ResultBuilder`パターンを活用したDSL構文
+- `UIViewRepresentable`によるUIKit機能のSwiftUI統合
+- 再利用可能なコンポーネントによるモジュール化
+
+### 活用技術:
+- SwiftUIの宣言的UI構築
+- MVVMアーキテクチャパターンの適用
+- UIKitブリッジングテクニック
+- カスタム結果ビルダーの実装
+- コンポジショナルデザインアプローチ
+- テキスト操作のプログラマティック制御
+- バインディングを活用した状態管理
+- エンタープライズレベルのコード構造化と分離
+</details>
