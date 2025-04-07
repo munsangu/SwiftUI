@@ -962,3 +962,31 @@ SwiftUI, MVVM, テキストフィールドカスタマイズ, UIKitブリッジ�
 - バインディングを活用した状態管理
 - エンタープライズレベルのコード構造化と分離
 </details>
+
+## [AlertDrawer](https://github.com/munsangu/SwiftUI/tree/master/AlertDrawer/AlertDrawer)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/c94d8552-3679-48eb-9760-5ae85b9721b0"></p>
+<p align="center">
+SwiftUI, MVVM, テキストフィールドカスタマイズ, UIKitブリッジング
+</p>
+
+### 主な機能:
+- ボタンから展開するアニメーションアラートドロワー
+- カスタマイズ可能なテーマとスタイリング
+- 柔軟なコンテンツレイアウト
+- 自然なアニメーショントランジション
+- プライマリおよびセカンダリボタンアクション
+
+### 実装の詳細:
+- `DrawerConfig`モデルによるテーマとアニメーション設定
+- ビュー拡張によるモジュラー実装（`View.alertDrawer`モディファイア）
+- ジオメトリトラッキングによる正確な位置計算
+- ボタンスタイルのカスタマイズとアニメーション処理
+
+### 活用技術:
+- SwiftUIの宣言的UI構築
+- アニメーションとトランジション効果
+- ジオメトリリーダーを活用した動的レイアウト
+- カスタムモディファイアパターン
+- 視覚効果の合成
