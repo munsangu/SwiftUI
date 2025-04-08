@@ -992,7 +992,7 @@ SwiftUI, MVVM, テキストフィールドカスタマイズ, UIKitブリッジ�
 - 視覚効果の合成
 </details>
 
-## [SlideToConfirm](https://github.com/munsangu/SwiftUI/tree/master/SlideToConfirm/SlideToConfirm)
+## [SlideToControl](https://github.com/munsangu/SwiftUI/tree/master/SlideToControl/SlideToControl)
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
 <p align="center">
