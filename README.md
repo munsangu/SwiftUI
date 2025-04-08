@@ -990,6 +990,7 @@ SwiftUI, MVVM, テキストフィールドカスタマイズ, UIKitブリッジ�
 - ジオメトリリーダーを活用した動的レイアウト
 - カスタムモディファイアパターン
 - 視覚効果の合成
+</details>
 
 ## [SlideToConfirm](https://github.com/munsangu/SwiftUI/tree/master/SlideToConfirm/SlideToConfirm)
 <details>
@@ -1028,3 +1029,4 @@ SwiftUI, MVVM, スライド操作UI, アニメーション, コンファーム�
 - `onSwiped`クロージャで任意のアクション実行可能
 - スタイルを共通化した再利用可能なUIコンポーネント
 - 見た目と機能を両立したエンタープライズ品質のコード構造
+</details>
