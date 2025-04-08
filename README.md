@@ -990,3 +990,41 @@ SwiftUI, MVVM, テキストフィールドカスタマイズ, UIKitブリッジ�
 - ジオメトリリーダーを活用した動的レイアウト
 - カスタムモディファイアパターン
 - 視覚効果の合成
+
+## [SlideToConfirm](https://github.com/munsangu/SwiftUI/tree/master/SlideToConfirm/SlideToConfirm)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/35865960-6955-42d1-a76a-baa34948dc0b">
+  <img src="https://github.com/user-attachments/assets/7d428901-b064-4a01-859e-11f2885404ed">
+</p>
+<p align="center">
+SwiftUI, MVVM, スライド操作UI, アニメーション, コンファームボタン
+</p>
+
+### 主な機能:
+- スワイプでアクションを確定する直感的な操作
+- 成功時の状態遷移アニメーション（チェックマークに変化）
+- テキストにシマー効果を適用した洗練されたインジケーション
+- スライド中・完了後の進捗に応じたUI変更
+- スムーズなレスポンスとリアルタイムな反映
+
+### 実装の詳細:
+- `MVVM`アーキテクチャによる明確な責務分離
+- `@ObservableObject`を用いたリアクティブな状態管理
+- `GeometryReader`による制限付きのスライド距離計算
+- `DragGesture`による滑らかなインタラクション
+- `ViewModel`によるロジックの統一管理
+- `withAnimation(.smooth)`を活用した自然なエフェクト
+- ユーザーの操作に対する即時レスポンス設計
+
+### 活用技術:
+- `SwiftUI`の宣言的UI構文
+- `StateObject`を用いたViewModelライフサイクル管理
+- アニメーションチェーンと条件付きオーバーレイ
+- 拡張可能な`Config`モデルによる柔軟な設定
+- `ZStack`や`mask`を活用したレイヤードUI構造
+- アクセシビリティを考慮した文字サイズとコントラスト
+- `onSwiped`クロージャで任意のアクション実行可能
+- スタイルを共通化した再利用可能なUIコンポーネント
+- 見た目と機能を両立したエンタープライズ品質のコード構造
