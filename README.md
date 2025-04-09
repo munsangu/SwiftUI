@@ -1030,3 +1030,37 @@ SwiftUI, MVVM, スライド操作UI, アニメーション, コンファーム�
 - スタイルを共通化した再利用可能なUIコンポーネント
 - 見た目と機能を両立したエンタープライズ品質のコード構造
 </details>
+
+## [RippleTransition](https://github.com/munsangu/SwiftUI/tree/master/RippleTransition/RippleTransition)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/4348c0d7-21e9-427b-8f76-20dbd385bbbf"></p>
+<p align="center">
+SwiftUI, MVVM, カスタムトランジション, UI/UXデザイン, リップルアニメーション
+</p>
+
+### 主な機能:
+- タップ位置から波紋（リップル）状に広がるトランジションアニメーション
+- リップルを利用した画面切り替えとオーバーレイ表示の演出
+- MVVMアーキテクチャに基づいた構成
+- ユーザー操作に応じたダイナミックなUIアニメーション
+- シンプルかつ拡張性の高いコンポーネント構成
+
+### 実装の詳細:
+- GeometryReaderを活用したタップ位置の正確な取得
+- AnyTransitionのカスタムモディファイアによるアニメーション制御
+- RippleとReverseRippleの2種類のトランジションを提供
+- RippleModifier, Transitionファイルの分離による責務の明確化
+- ViewModelによる状態管理とロジック分離
+- 拡張性と保守性を意識したコンポーネント設計
+
+### 活用技術:
+- SwiftUIフレームワーク
+- ObservableObject, @State, @Publishedによる状態管理
+- カスタムViewModifier（Ripple）
+- AnyTransitionによるトランジション制御
+- GeometryReaderを用いたビューサイズ・座標の取得
+- ZStackとoverlayによる階層的なUI構成
+- NavigationStackを使った画面遷移構成
+- タップジェスチャーの位置座標取得（coordinateSpace）
+</details>
