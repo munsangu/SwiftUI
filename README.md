@@ -1064,3 +1064,40 @@ SwiftUI, MVVM, カスタムトランジション, UI/UXデザイン, リップ�
 - NavigationStackを使った画面遷移構成
 - タップジェスチャーの位置座標取得（coordinateSpace）
 </details>
+
+## [Skeleton](https://github.com/munsangu/SwiftUI/tree/master/Skeleton/Skeleton)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5d98db50-ed46-433c-ba1f-4fba665dd09b">
+  <img src="https://github.com/user-attachments/assets/a2d845c4-297f-46cb-8a38-7f21e5cd5ca0">
+</p>
+<p align="center">
+SwiftUI, MVVM, スケルトンUI, アニメーション, タップジェスチャー
+</p>
+
+### 主な機能:
+- カードをタップして表示／非表示を切り替えるインタラクティブなUI
+- 情報が読み込まれていない状態でのスケルトンアニメーション表示
+- タイトル・サブタイトル・説明に対応したダイナミックカードビュー
+- 状態に応じてリアルタイムにカードコンテンツが変化
+- レスポンシブで自然な表示トランジション
+
+### 実装の詳細:
+- `MVVM`アーキテクチャによるロジックとUIの分離
+- `@StateObject`によるViewModelライフサイクルの明示的管理
+- `@Published`プロパティで状態変化を即座にUIへ反映
+- `withAnimation(.smooth)`でタップ時に滑らかなアニメーションを実現
+- `Optional Binding`を活用した条件付きUI表示
+- データ非表示時は `SkeletonView` によるスケルトンプレースホルダを表示
+- `Image`, `Text`, `ZStack` による情報カードの構成
+
+### 活用技術:
+- `SwiftUI`の宣言的UI構築
+- スケルトン用の `Custom View` を独自実装し、再利用可能に設計
+- `clipShape`, `shadow`, `cornerRadius` による洗練されたカードUI
+- `GeometryReader` による `SkeletonView` のアニメーション範囲計算
+- 拡張可能な `Card` モデルによる柔軟なデータバインディング
+- `Preview` での動作確認に対応した設計
+- スタイルと機能を両立したエンタープライズレベルの構造設計
+</details>
