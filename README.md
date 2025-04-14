@@ -1101,3 +1101,34 @@ SwiftUI, MVVM, スケルトンUI, アニメーション, タップジェスチ�
 - `Preview` での動作確認に対応した設計
 - スタイルと機能を両立したエンタープライズレベルの構造設計
 </details>
+
+## [GlitchTextEffect](https://github.com/munsangu/SwiftUI/tree/master/GlitchTextEffect/GlitchTextEffect)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center"><img src="https://github.com/user-attachments/assets/641212e7-21aa-408b-80f7-e0d31c2b48e9"></p>
+<p align="center">
+SwiftUI, MVVM, カスタムテキストアニメーション, UI/UXデザイン, グリッチエフェクト
+</p>
+
+### 主な機能:
+- 複数行に対応したグリッチテキストアニメーション
+- トリガーボタンによる段階的なエフェクト起動
+- MVVMアーキテクチャに基づいた構成
+- カスタムKeyframeアニメーションによる細かな視覚制御
+- シンプルかつ再利用可能なテキストエフェクト構成
+
+### 実装の詳細:
+- `KeyframeAnimator` を活用したグリッチの時間制御
+- `GlitchFrame` によるテキストのオフセット・シャドウ・透明度アニメーション
+- ViewModelでの非同期シーケンスによるアニメーション制御
+- `@resultBuilder` を使ったアニメーション定義の簡素化
+- View層とアニメーションロジックの分離
+
+### 活用技術:
+- SwiftUIフレームワーク
+- ObservableObject, @StateObject, @Publishedによる状態管理
+- カスタムView（GlitchText, GlitchTextView）
+- @resultBuilderによるフレーム定義
+- 非同期処理（Task / sleep）
+- ZStackとVStackによるレイアウト構成
+</details>
