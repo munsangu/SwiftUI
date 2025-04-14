@@ -1102,7 +1102,7 @@ SwiftUI, MVVM, スケルトンUI, アニメーション, タップジェスチ�
 - スタイルと機能を両立したエンタープライズレベルの構造設計
 </details>
 
-## [GlitchTextEffect](https://github.com/munsangu/SwiftUI/tree/master/GlitchTextEffect/GlitchTextEffect)
+## [GlitchEffect](https://github.com/munsangu/SwiftUI/tree/master/GlitchEffect/GlitchEffect)
 <details>
 <summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
 <p align="center"><img src="https://github.com/user-attachments/assets/641212e7-21aa-408b-80f7-e0d31c2b48e9"></p>
