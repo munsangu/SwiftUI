@@ -1132,3 +1132,44 @@ SwiftUI, MVVM, カスタムテキストアニメーション, UI/UXデザイン,
 - 非同期処理（Task / sleep）
 - ZStackとVStackによるレイアウト構成
 </details>
+
+## [ShineEffect](https://github.com/munsangu/SwiftUI/tree/master/ShineEffect/ShineEffect)
+<details>
+<summary>プロジェクトの詳細を見る (詳細を表示するにはクリック)</summary>
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/583e6037-894a-4314-8fa9-5cfd52df2147">
+    <img src="https://github.com/user-attachments/assets/258ef8ae-8be0-4285-950f-d1747ad2bd6b">
+</p>
+<p align="center">SwiftUI, MVVM, カスタムアニメーション, シャインエフェクト, UI/UXデザイン</p>
+
+### 主な機能:
+- タップやボタン操作で起動する洗練されたシャインエフェクト
+- モダンで視覚的に魅力的なUI/UXデザイン
+- MVVMアーキテクチャに基づいた実装
+- カスタマイズ可能なアニメーション設定（持続時間、方向）
+- 様々な形状に適用可能なクリップシェイプ
+- インタラクティブな操作性
+
+### 実装の詳細:
+- MVVMパターンによるクリーンなコード構造
+- ジオメトリリーダーを活用した正確なエフェクト計算
+- カスタムビュー修飾子による再利用可能なUI実装
+- KeyframeAnimatorを使用した高度なアニメーション制御
+- 線形グラデーションによる自然な輝き表現
+- カスタマイズ可能なエフェクトパラメータ
+- メンテナンス性と拡張性を考慮した設計
+
+### 活用技術:
+- SwiftUIフレームワーク
+- ObservableObjectとStateObjectによる状態管理
+- カスタムビュー修飾子
+- ジオメトリリーダーによる位置計算
+- KeyframeAnimatorによるアニメーション制御
+- 線形グラデーションの効果的な活用
+- 依存性注入を用いたテスト可能な設計
+- スケーリングと回転を組み合わせた視覚効果
+- 再利用可能なコンポーネント設計
+- 安全エリアの適切な処理
+- 直感的なユーザーインターフェース
+</details>
+
