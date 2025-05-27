@@ -1,0 +1,31 @@
+Marvel = "Marvel";
+
+Ironman = "Iron Man";
+iron_man_desc = "Tony Stark is a genius billionaire in an advanced suit.";
+
+CaptainAmerica = "Captain America";
+captain_america_desc = "A super soldier born during World War II.";
+
+Thor = "Thor";
+thor_desc = "The god of thunder and prince of Asgard.";
+
+Hulk = "Hulk";
+hulk_desc = "A scientist who gains superhuman strength through anger.";
+
+BlackWidow = "Black Widow";
+black_widow_desc = "A skilled warrior and former Russian spy.";
+
+Loki = "Loki";
+loki_desc = "The god of mischief and Thor's brother.";
+
+Thanos = "Thanos";
+thanos_desc = "The most powerful villain who seeks universal balance.";
+
+Spiderman = "Spider-Man";
+spiderman_desc = "A high school superhero bitten by a radioactive spider.";
+
+Dr.Strange = "Doctor Strange";
+dr_strange_desc = "A former surgeon who masters magic and time.";
+
+Ultron = "Ultron";
+ultron_desc = "An AI turned rogue, threatening humanity.";

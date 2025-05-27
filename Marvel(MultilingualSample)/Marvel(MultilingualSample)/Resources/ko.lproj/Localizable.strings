@@ -1,0 +1,31 @@
+Marvel = "마블";
+
+Ironman = "아이언맨";
+iron_man_desc = "토니 스타크는 첨단 슈트를 입은 천재 억만장자입니다.";
+
+CaptainAmerica = "캡틴 아메리카";
+captain_america_desc = "2차 세계대전 중 탄생한 슈퍼 솔저입니다.";
+
+Thor = "토르";
+thor_desc = "천둥의 신이자 아스가르드의 왕자입니다.";
+
+Hulk = "헐크";
+hulk_desc = "분노로 인해 초인적인 힘을 얻는 과학자입니다.";
+
+BlackWidow = "블랙 위도우";
+black_widow_desc = "과거 러시아 첩보원이었던 숙련된 전사입니다.";
+
+Loki = "로키";
+loki_desc = "장난의 신이며 토르의 형제입니다.";
+
+Thanos = "타노스";
+thanos_desc = "우주의 균형을 추구하는 최강의 빌런입니다.";
+
+Spiderman = "스파이더맨";
+spiderman_desc = "방사능 거미에 물린 고등학생 슈퍼히어로입니다.";
+
+Dr.Strange = "닥터 스트레인지";
+dr_strange_desc = "마법과 시간을 다루는 전직 외과의사입니다.";
+
+Ultron = "울트론";
+ultron_desc = "AI로 개발되었지만 인류를 위협하는 존재가 된 로봇입니다.";
