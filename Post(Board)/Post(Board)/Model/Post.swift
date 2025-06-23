@@ -1,7 +1,9 @@
 import Foundation
+import SwiftData
 
-struct Post: Identifiable, Equatable, Codable {
-    let id: UUID
+@Model
+class Post {
+    @Attribute(.unique) var id: UUID
     var title: String
     var content: String
     var createdAt: Date

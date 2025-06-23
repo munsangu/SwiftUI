@@ -1,12 +1,18 @@
 import SwiftUI
+import SwiftData
 
 struct PostListView: View {
-    @EnvironmentObject var viewModel: PostViewModel
+    @Environment(\.modelContext) private var context
+    @Query(
+        sort: \Post.createdAt,
+        order: .reverse
+    ) private var posts: [Post]
     @State private var showCreate = false
+
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.posts) { post in
+                ForEach(posts) { post in
                     NavigationLink(destination: PostDetailView(post: post)) {
                         VStack(alignment: .leading) {
                             Text(post.title).font(.headline)
@@ -15,7 +21,12 @@ struct PostListView: View {
                         }
                     }
                 }
-                .onDelete(perform: viewModel.deletePost)
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        context.delete(posts[index])
+                    }
+                    try? context.save()
+                }
             }
             .navigationTitle("Board")
             .toolbar {

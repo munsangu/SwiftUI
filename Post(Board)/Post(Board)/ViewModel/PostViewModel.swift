@@ -1,16 +1,11 @@
 import Foundation
+import SwiftData
 
 class PostViewModel: ObservableObject {
-    @Published var posts: [Post] = [] {
-        didSet {
-            savePosts()
-        }
-    }
+    let context: ModelContext
 
-    private let storageKey = "SavedPosts"
-
-    init() {
-        loadPosts()
+    init(context: ModelContext) {
+        self.context = context
     }
 
     func addPost(
@@ -21,35 +16,22 @@ class PostViewModel: ObservableObject {
             title: title,
             content: content
         )
-        posts.insert(newPost, at: 0)
+        context.insert(newPost)
+        try? context.save()
     }
 
-    func updatePost(_ updated: Post) {
-        if let index = posts.firstIndex(where: { $0.id == updated.id }) {
-            posts[index] = updated
-        }
+    func updatePost(
+        _ post: Post,
+        title: String,
+        content: String
+    ) {
+        post.title = title
+        post.content = content
+        try? context.save()
     }
 
-    func deletePost(at offsets: IndexSet) {
-        posts.remove(atOffsets: offsets)
-    }
-
-    private func savePosts() {
-        if let encoded = try? JSONEncoder().encode(posts) {
-            UserDefaults.standard.set(
-                encoded,
-                forKey: storageKey
-            )
-        }
-    }
-
-    private func loadPosts() {
-        if let data = UserDefaults.standard.data(forKey: storageKey),
-           let decoded = try? JSONDecoder().decode(
-            [Post].self,
-            from: data
-           ) {
-            self.posts = decoded
-        }
+    func deletePost(_ post: Post) {
+        context.delete(post)
+        try? context.save()
     }
 }
