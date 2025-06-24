@@ -18,6 +18,7 @@ class PostViewModel: ObservableObject {
         )
         context.insert(newPost)
         try? context.save()
+        NotificationManager.shared.sendPostCreatedNotification(title: title)
     }
 
     func updatePost(
