@@ -4,8 +4,10 @@ class HabitViewModel: ObservableObject {
     @Published var habits: [Habit] = []
     
     private let storageKey = "habits_storage"
+    private let lastResetDateKey = "last_reset_date"
     
     init() {
+        checkAndResetIfNeeded()
         loadHabits()
     }
     
@@ -23,21 +25,37 @@ class HabitViewModel: ObservableObject {
         saveHabits()
     }
     
-    func loadHabits() {
-        if let data = UserDefaults.standard.data(forKey: storageKey),
-           let decoded = try? JSONDecoder().decode(
-            [Habit].self,
-            from: data
-           )
-        {
-            self.habits = decoded
-        } else {
-            self.habits = [
-                Habit(name: "Drink Water"),
-                Habit(name: "Read 10 Pages"),
-                Habit(name: "Stretch 5 Minutes"),
-            ]
+    private func checkAndResetIfNeeded() {
+        let now = Date()
+        let lastResetDate = UserDefaults.standard.object(forKey: lastResetDateKey) as? Date ?? Date.distantPast
+        let calendar = Calendar.current
+
+        if !calendar.isDate(now, inSameDayAs: lastResetDate) {
+            print("🌀 A new day has started — resetting all habit states.")
+            resetAllHabits()
         }
+    }
+    
+    func loadHabits() {
+        self.habits = [
+            Habit(name: "Drink Water"),
+            Habit(name: "Read 10 Pages"),
+            Habit(name: "Stretch 5 Minutes"),
+        ]
+//        if let data = UserDefaults.standard.data(forKey: storageKey),
+//           let decoded = try? JSONDecoder().decode(
+//            [Habit].self,
+//            from: data
+//           )
+//        {
+//            self.habits = decoded
+//        } else {
+//            self.habits = [
+//                Habit(name: "Drink Water"),
+//                Habit(name: "Read 10 Pages"),
+//                Habit(name: "Stretch 5 Minutes"),
+//            ]
+//        }
     }
     
     func saveHabits() {

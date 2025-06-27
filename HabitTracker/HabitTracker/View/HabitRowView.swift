@@ -9,11 +9,14 @@ struct HabitRowView: View {
             
             Spacer()
             
-            Image(systemName: habit.isCompletedToday ? "checkmark.circle.fill" : "circle")
-                .foregroundStyle(habit.isCompletedToday ? .green : .gray)
-                .onTapGesture {
-                    toggleAction()
-                }
+            Button(action: {
+                toggleAction()
+            }) {
+                Image(systemName: habit.isCompletedToday ? "checkmark.circle.fill" : "circle")
+                    .foregroundColor(habit.isCompletedToday ? .green : .gray)
+                    .accessibilityLabel(habit.isCompletedToday ? "Mark as not completed" : "Mark as completed")
+            }
+            .buttonStyle(.plain)
         }
         .padding(
             .vertical,
