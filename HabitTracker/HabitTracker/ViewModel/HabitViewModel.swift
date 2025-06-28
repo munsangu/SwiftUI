@@ -25,6 +25,18 @@ class HabitViewModel: ObservableObject {
         saveHabits()
     }
     
+    func addHabit(name: String) {
+        guard !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        let newHabit = Habit(name: name)
+        habits.append(newHabit)
+        saveHabits()
+    }
+
+    func deleteHabit(at offsets: IndexSet) {
+        habits.remove(atOffsets: offsets)
+        saveHabits()
+    }
+    
     private func checkAndResetIfNeeded() {
         let now = Date()
         let lastResetDate = UserDefaults.standard.object(forKey: lastResetDateKey) as? Date ?? Date.distantPast
