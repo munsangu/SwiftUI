@@ -30,9 +30,16 @@ class HabitViewModel: ObservableObject {
         let newHabit = Habit(name: name)
         habits.append(newHabit)
         saveHabits()
+        
+        NotificationManager.shared.scheduleNotification(for: newHabit)
     }
 
     func deleteHabit(at offsets: IndexSet) {
+        for index in offsets {
+            let habit = habits[index]
+            NotificationManager.shared.removeNotification(for: habit)
+        }
+        
         habits.remove(atOffsets: offsets)
         saveHabits()
     }
