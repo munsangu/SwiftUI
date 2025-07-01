@@ -1,40 +1,56 @@
 import Foundation
 import AVFoundation
 
-class SoundButtonViewModel: ObservableObject {
-    @Published var buttons: [SoundButton] = [
-        SoundButton(
-            title: "Drum",
-            soundFileName: "drum.wav"
+class DrumPadViewModel: ObservableObject {
+    @Published var pads: [DrumPad] = [
+        DrumPad(
+            name: "Kick",
+            fileName: "kick",
+            fileExtension: "wav",
+            label: "Kick"
         ),
-        SoundButton(
-            title: "Bell",
-            soundFileName: "bell.wav"
+        DrumPad(
+            name: "Snare",
+            fileName: "snare",
+            fileExtension: "wav",
+            label: "Snare"
         ),
-        SoundButton(
-            title: "Clap",
-            soundFileName: "clap.wav"
+        DrumPad(
+            name: "HiHat",
+            fileName: "hi-hat",
+            fileExtension: "aiff",
+            label: "Hi-Hat"
+        ),
+        DrumPad(
+            name: "Crash",
+            fileName: "cymbal",
+            fileExtension: "aiff",
+            label: "Cymbal"
+        ),
+        DrumPad(
+            name: "Tom",
+            fileName: "tom",
+            fileExtension: "aiff",
+            label: "Tom"
         )
     ]
     
     private var player: AVAudioPlayer?
 
-    func playSound(for button: SoundButton) {
+    func playSound(for pad: DrumPad) {
         guard let url = Bundle.main.url(
-            forResource: button.soundFileName.replacingOccurrences(
-                of: ".wav",
-                with: ""
-            ),
-            withExtension: "wav"
+            forResource: pad.fileName,
+            withExtension: pad.fileExtension
         ) else {
-            print("Sound file not found: \(button.soundFileName)")
+            print("⚠️ File not found: \(pad.fileName).\(pad.fileExtension)")
             return
         }
         do {
             player = try AVAudioPlayer(contentsOf: url)
+            player?.prepareToPlay()
             player?.play()
         } catch {
-            print("Error playing sound: \(error.localizedDescription)")
+            print("🎧 Playback error: \(error.localizedDescription)")
         }
     }
 }

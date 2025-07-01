@@ -1,24 +1,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = SoundButtonViewModel()
+    @StateObject private var viewModel = DrumPadViewModel()
+
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
 
     var body: some View {
         ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
-            
-            VStack(spacing: 20) {
-                ForEach(viewModel.buttons) { button in
+            Color.black.ignoresSafeArea()
+
+            LazyVGrid(
+                columns: columns,
+                spacing: 24
+            ) {
+                ForEach(viewModel.pads) { pad in
                     Button(action: {
-                        viewModel.playSound(for: button)
+                        viewModel.playSound(for: pad)
                     }) {
-                        Text(button.title)
-                            .font(.title)
+                        Text(pad.label)
+                            .font(.title2)
+                            .bold()
                             .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.gray.opacity(0.8))
-                            .cornerRadius(12)
+                            .frame(
+                                width: 140,
+                                height: 140
+                            )
+                            .background(Color.gray.opacity(0.9))
+                            .clipShape(Circle())
+                            .shadow(radius: 10)
                     }
                 }
             }

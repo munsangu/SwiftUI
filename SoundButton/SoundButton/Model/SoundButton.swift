@@ -1,7 +1,9 @@
 import Foundation
 
-struct SoundButton: Identifiable {
+struct DrumPad: Identifiable {
     let id = UUID()
-    let title: String
-    let soundFileName: String
+    let name: String
+    let fileName: String
+    let fileExtension: String
+    let label: String
 }
