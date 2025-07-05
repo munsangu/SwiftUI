@@ -5,6 +5,6 @@ struct KalimbaKey: Identifiable {
     let note: String
     let soundFile: String
     let keyWidth: CGFloat
-    let keyHeight: CGFloat
+    let heightRatio: CGFloat
     let isLeftAligned: Bool
 }

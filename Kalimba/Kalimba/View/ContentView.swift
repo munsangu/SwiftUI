@@ -2,55 +2,99 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = KalimbaViewModel()
-
+    @State private var pressedKeyId: UUID? = nil
+    @State private var selectedNote: String? = nil
     var body: some View {
         GeometryReader { geometry in
-            NavigationStack {
-                ZStack {
-                    VStack {
-                        HStack(
-                            alignment: .bottom,
-                            spacing: 6
-                        ) {
-                            ForEach(viewModel.keys) { key in
-                                Button(action: {
-                                    viewModel.playSound(for: key)
-                                }) {
-                                    ZStack {
-                                        RoundedRectangle(cornerRadius: 6)
-                                            .fill(key.isLeftAligned ? Color.blue.opacity(0.8) : Color.cyan.opacity(0.8))
-                                            .frame(
-                                                width: key.keyWidth,
-                                                height: key.keyHeight
-                                            )
+            ZStack {
+                Image("kalimba_wood")
+                    .resizable()
+                    .ignoresSafeArea()
 
-                                        VStack(spacing: 0) {
-                                            ForEach(
-                                                Array(key.note),
-                                                id: \.self
-                                            ) { char in
-                                                Text(String(char))
-                                                    .foregroundColor(.white)
-                                                    .font(.caption2)
-                                            }
-                                        }
-                                        .padding(.top, 4)
+                VStack {
+                    if let note = selectedNote {
+                        Text(note)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .shadow(radius: 4)
+                            .transition(.opacity)
+                    } else {
+                        Spacer()
+                        
+                        Text("Pressed Button")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .shadow(radius: 4)
+                            .transition(.opacity)
+                    }
+                    
+                    Spacer(minLength: geometry.size.height * 0.15)
+
+                    HStack(alignment: .bottom, spacing: 2) {
+                        ForEach(viewModel.keys) { key in
+                            Button(action: {
+                                withAnimation(.easeInOut(duration: 0.1)) {
+                                    pressedKeyId = key.id
+                                    selectedNote = key.note
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                                    withAnimation(.easeOut(duration: 0.1)) {
+                                        pressedKeyId = nil
                                     }
                                 }
-                                .buttonStyle(PlainButtonStyle())
+                                viewModel.playSound(for: key)
+                                selectedNote = key.note
+                            }) {
+                                ZStack(alignment: .bottom) {
+                                    RoundedRectangle(cornerRadius: 4)
+                                        .fill(
+                                            LinearGradient(
+                                                colors: [
+                                                    Color(white: 0.95),
+                                                    Color(white: 0.75)
+                                                ],
+                                                startPoint: .top,
+                                                endPoint: .bottom
+                                            )
+                                        )
+                                        .frame(
+                                            width: key.keyWidth,
+                                            height: geometry.size.height * 0.75 * key.heightRatio
+                                        )
+                                        .scaleEffect(pressedKeyId == key.id ? 0.95 : 1.0)
+                                        .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 2)
+
+                                    Text(key.note)
+                                        .foregroundColor(.black)
+                                        .font(
+                                            .system(
+                                                size: 14,
+                                                weight: .bold
+                                            )
+                                        )
+                                        .padding(
+                                            .bottom,
+                                            50
+                                        )
+                                }
                             }
+                            .buttonStyle(.plain)
                         }
-                        .frame(
-                            width: geometry.size.width * 0.95,
-                            height: geometry.size.height * 1.2
-                        )
-                        .padding()
-                        .background(Color(UIColor.brown))
-                        .cornerRadius(24)
                     }
-                    .ignoresSafeArea()
+                    .padding(
+                        .horizontal,
+                        12
+                    )
+                    .padding(
+                        .vertical,
+                        16
+                    )
+                    .cornerRadius(12)
+
+                    Spacer()
                 }
-                .navigationTitle("Kalimba")
             }
         }
     }
