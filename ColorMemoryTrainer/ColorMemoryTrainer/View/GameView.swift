@@ -11,16 +11,22 @@ struct GameView: View {
             switch viewModel.phase {
             case .preview:
                 Text("Memorize the colors!")
+                
                 HStack {
                     ForEach(
-                        viewModel.sequence,
-                        id: \.self
-                    ) { gameColor in
+                        Array(viewModel.sequence.enumerated()),
+                        id: \.offset
+                    ) { index, gameColor in
                         Circle()
                             .fill(gameColor.color)
                             .frame(
-                                width: 50,
-                                height: 50
+                                width: viewModel.highlightIndex == index ? 80 : 50,
+                                height: viewModel.highlightIndex == index ? 80 : 50
+                            )
+                            .scaleEffect(viewModel.highlightIndex == index ? 1.3 : 1.0)
+                            .animation(
+                                .easeInOut(duration: 0.3),
+                                value: viewModel.highlightIndex
                             )
                     }
                 }
@@ -36,12 +42,9 @@ struct GameView: View {
             Spacer()
         }
         .padding()
-        .animation(
-            .easeInOut,
-            value: viewModel.phase
-        )
     }
 }
+
 
 #Preview {
     GameView()
