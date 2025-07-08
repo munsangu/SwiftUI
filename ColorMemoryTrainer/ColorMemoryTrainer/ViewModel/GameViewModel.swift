@@ -10,11 +10,11 @@ final class GameViewModel: ObservableObject {
     
     private var level: Int = 3
     private var player: AVAudioPlayer?
-    
+
     init() {
         startNewGame()
     }
-    
+
     func startNewGame() {
         userInput = []
         score = 0
@@ -24,16 +24,19 @@ final class GameViewModel: ObservableObject {
     }
 
     private func startHighlighting() {
+        let interval = max(0.6 - Double(level) * 0.05, 0.2)
+        
         for (index, _) in sequence.enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.6) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * interval) {
                 self.highlightIndex = index
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + interval * 0.6) {
                     self.highlightIndex = nil
                 }
             }
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + Double(sequence.count) * 0.6 + 0.5) {
+
+        let totalDuration = Double(sequence.count) * interval + 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration) {
             self.phase = .input
         }
     }
@@ -41,6 +44,7 @@ final class GameViewModel: ObservableObject {
     func selectColor(_ color: GameColor) {
         guard phase == .input else { return }
         userInput.append(color)
+        
         if userInput.count == sequence.count {
             checkAnswer()
         }
@@ -50,9 +54,11 @@ final class GameViewModel: ObservableObject {
         let correct = zip(sequence, userInput).filter { $0 == $1 }.count
         score = correct
         phase = .result
-        
+
         if score == sequence.count {
-            playSuccessSound()
+            playSound(named: "success")
+        } else {
+            playSound(named: "fail")
         }
     }
 
@@ -65,16 +71,16 @@ final class GameViewModel: ObservableObject {
         startNewGame()
     }
 
-    private func playSuccessSound() {
+    private func playSound(named file: String) {
         guard let url = Bundle.main.url(
-            forResource: "success",
+            forResource: file,
             withExtension: "wav"
         ) else { return }
         do {
             player = try AVAudioPlayer(contentsOf: url)
             player?.play()
         } catch {
-            print("Sound error:", error.localizedDescription)
+            print("Sound error: \(error.localizedDescription)")
         }
     }
 }
