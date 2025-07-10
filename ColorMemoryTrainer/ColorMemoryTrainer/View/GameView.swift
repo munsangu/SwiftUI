@@ -7,6 +7,9 @@ struct GameView: View {
             Text("🎨 Color Memory Trainer")
                 .font(.title)
                 .bold()
+            
+            Text("❤️ Lives: \(viewModel.remainingLives)")
+                .font(.subheadline)
 
             switch viewModel.phase {
             case .preview:
@@ -37,8 +40,16 @@ struct GameView: View {
                 ColorButtonsGrid(viewModel: viewModel)
             case .result:
                 ResultView(viewModel: viewModel)
+            case .gameOver:
+            VStack(spacing: 16) {
+                Text("Game Over 💀")
+                    .font(.title2)
+                
+                Button("Restart") {
+                    viewModel.resetGame()
+                    }
+                }
             }
-
             Spacer()
         }
         .padding()

@@ -7,6 +7,7 @@ final class GameViewModel: ObservableObject {
     @Published var userInput: [GameColor] = []
     @Published var highlightIndex: Int? = nil
     @Published var score: Int = 0
+    @Published var remainingLives: Int = 3
     
     private var level: Int = 3
     private var player: AVAudioPlayer?
@@ -16,6 +17,11 @@ final class GameViewModel: ObservableObject {
     }
 
     func startNewGame() {
+        guard remainingLives > 0 else {
+            phase = .gameOver
+            return
+        }
+        
         userInput = []
         score = 0
         phase = .preview
@@ -58,7 +64,13 @@ final class GameViewModel: ObservableObject {
         if score == sequence.count {
             playSound(named: "success")
         } else {
+            remainingLives -= 1
             playSound(named: "fail")
+            if remainingLives == 0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    self.phase = .gameOver
+                }
+            }
         }
     }
 
@@ -68,6 +80,12 @@ final class GameViewModel: ObservableObject {
 
     func nextLevel() {
         level += 1
+        startNewGame()
+    }
+
+    func resetGame() {
+        remainingLives = 3
+        level = 3
         startNewGame()
     }
 
