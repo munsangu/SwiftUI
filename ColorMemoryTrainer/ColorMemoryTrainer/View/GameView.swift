@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct GameView: View {
-    @StateObject private var viewModel = GameViewModel()
+    @ObservedObject var viewModel: GameViewModel
     var body: some View {
         VStack(spacing: 20) {
             Text("🎨 Color Memory Trainer")
@@ -57,6 +57,6 @@ struct GameView: View {
 }
 
 
-#Preview {
-    GameView()
-}
+//#Preview {
+//    GameView()
+//}

@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 import AVFoundation
 
 final class GameViewModel: ObservableObject {
@@ -11,9 +12,14 @@ final class GameViewModel: ObservableObject {
     
     private var level: Int = 3
     private var player: AVAudioPlayer?
+    var modelContext: ModelContext?
 
     init() {
         startNewGame()
+    }
+    
+    func setContext(_ context: ModelContext) {
+        self.modelContext = context
     }
 
     func startNewGame() {
@@ -63,12 +69,14 @@ final class GameViewModel: ObservableObject {
 
         if score == sequence.count {
             playSound(named: "success")
+            saveToLeaderboard()
         } else {
             remainingLives -= 1
             playSound(named: "fail")
             if remainingLives == 0 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     self.phase = .gameOver
+                    self.saveToLeaderboard()
                 }
             }
         }
@@ -99,6 +107,20 @@ final class GameViewModel: ObservableObject {
             player?.play()
         } catch {
             print("Sound error: \(error.localizedDescription)")
+        }
+    }
+    
+    private func saveToLeaderboard() {
+        guard let context = modelContext else { return }
+        let entry = LeaderboardEntry(
+            level: level,
+            score: score
+        )
+        context.insert(entry)
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save leaderboard entry: \(error)")
         }
     }
 }
