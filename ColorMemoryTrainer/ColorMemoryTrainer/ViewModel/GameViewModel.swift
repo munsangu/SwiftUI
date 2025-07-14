@@ -13,6 +13,7 @@ final class GameViewModel: ObservableObject {
     private var level: Int = 3
     private var player: AVAudioPlayer?
     var modelContext: ModelContext?
+    @AppStorage("playerNickname") private var playerNickname: String = "Player"
 
     init() {
         startNewGame()
@@ -114,11 +115,13 @@ final class GameViewModel: ObservableObject {
         guard let context = modelContext else { return }
         let entry = LeaderboardEntry(
             level: level,
-            score: score
+            score: score,
+            nickname: playerNickname
         )
         context.insert(entry)
         do {
             try context.save()
+            print("✅ Leaderboard saved: \(playerNickname), score: \(score)")
         } catch {
             print("Failed to save leaderboard entry: \(error)")
         }

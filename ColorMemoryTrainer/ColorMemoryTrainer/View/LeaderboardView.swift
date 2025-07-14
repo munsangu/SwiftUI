@@ -16,21 +16,21 @@ struct LeaderboardView: View {
                 ForEach(entries) { entry in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("Level \(entry.level)")
+                            Text(entry.nickname)
                                 .font(.headline)
                             
-                            Text(entry.date.formatted(
-                                    date: .abbreviated,
-                                    time: .shortened
-                                )
-                            )
-                            .font(.caption)
-                            .foregroundColor(.gray)
+                            Text("Level \(entry.level)")
+                                .font(.subheadline)
                         }
-                        
                         Spacer()
                         
-                        Text("Score: \(entry.score)")
+                        VStack {
+                            Text("Score: \(entry.score)")
+                            
+                            Text(entry.date.formatted())
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
                     }
                 }
             }

@@ -21,6 +21,16 @@ struct GameRootView: View {
                         systemImage: "list.number"
                     )
                 }
+            
+            NavigationStack {
+                SettingsView()
+            }
+            .tabItem {
+                Label(
+                    "Settings",
+                    systemImage: "gear"
+                )
+            }
         }
         .onAppear {
             viewModel.setContext(context)
