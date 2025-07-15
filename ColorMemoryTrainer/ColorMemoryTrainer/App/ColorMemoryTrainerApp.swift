@@ -5,7 +5,7 @@ import SwiftData
 struct ColorMemoryTrainerApp: App {
     var body: some Scene {
         WindowGroup {
-            GameRootView()
+            RootLauncherView()
         }
         .modelContainer(for: LeaderboardEntry.self)
     }
