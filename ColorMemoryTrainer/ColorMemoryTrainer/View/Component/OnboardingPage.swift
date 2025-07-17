@@ -5,16 +5,20 @@ struct OnboardingPage: View {
     let message: String
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 24) {
             Spacer()
+            
             Text(title)
                 .font(.title)
                 .bold()
                 .multilineTextAlignment(.center)
+            
             Text(message)
                 .font(.body)
+                .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
+            
             Spacer()
         }
     }

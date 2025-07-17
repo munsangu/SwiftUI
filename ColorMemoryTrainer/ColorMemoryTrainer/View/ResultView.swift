@@ -2,44 +2,89 @@ import SwiftUI
 
 struct ResultView: View {
     @ObservedObject var viewModel: GameViewModel
+
     var body: some View {
-        VStack(spacing: 10) {
-            Text("Result")
-                .font(.title2)
+        VStack(spacing: 16) {
+            Text(viewModel.isCorrect ? "🎉 Perfect!" : "❌ Try Again")
+                .font(.largeTitle)
                 .bold()
-            
-            Text("Correct: \(viewModel.score) / \(viewModel.sequence.count)")
+                .padding(.top)
 
-            HStack {
-                Text("Answer:")
+            VStack(
+                alignment: .leading,
+                spacing: 12
+            ) {
+                Text("Correct Sequence:")
+                    .font(.headline)
                 
-                ForEach(
-                    viewModel.sequence,
-                    id: \.self
-                ) { color in
-                    Circle()
-                        .fill(color.color)
-                        .frame(
-                            width: 30,
-                            height: 30
-                        )
+                HStack {
+                    ForEach(
+                        viewModel.sequence,
+                        id: \.self
+                    ) { color in
+                        Circle()
+                            .fill(color.color)
+                            .frame(
+                                width: 30,
+                                height: 30
+                            )
+                    }
+                }
+
+                Text("Your Sequence:")
+                    .font(.headline)
+                
+                HStack {
+                    ForEach(
+                        viewModel.userSequence,
+                        id: \.self
+                    ) { color in
+                        Circle()
+                            .fill(color.color)
+                            .frame(
+                                width: 30,
+                                height: 30
+                            )
+                    }
                 }
             }
+            .padding()
+            .background(Color.white)
+            .cornerRadius(12)
+            .shadow(radius: 4)
 
-            HStack(spacing: 20) {
-                Button("Retry") {
+            Text("Score: \(viewModel.score) / \(viewModel.sequence.count)")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .padding(.top, 4)
+
+            HStack(spacing: 24) {
+                Button(action: {
                     viewModel.retry()
+                }) {
+                    Text("🔄 Retry")
+                        .bold()
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(10)
                 }
 
-                Button("Next Level") {
+                Button(action: {
                     viewModel.nextLevel()
+                }) {
+                    Text("➡️ Next Level")
+                        .bold()
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
             }
-            .padding(
-                .top,
-                20
-            )
+            .padding(.top, 20)
         }
+        .padding()
     }
 }
 

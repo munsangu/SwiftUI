@@ -14,6 +14,14 @@ final class GameViewModel: ObservableObject {
     private var player: AVAudioPlayer?
     var modelContext: ModelContext?
     @AppStorage("playerNickname") private var playerNickname: String = "Player"
+    
+    var userSequence: [GameColor] {
+            return userInput
+        }
+
+    var isCorrect: Bool {
+        return sequence == userInput
+    }
 
     init() {
         startNewGame()
