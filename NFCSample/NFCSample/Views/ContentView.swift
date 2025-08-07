@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var nfcViewModel = NFCReaderViewModel()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {

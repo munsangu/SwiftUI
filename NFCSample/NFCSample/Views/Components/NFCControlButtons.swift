@@ -5,6 +5,7 @@ struct NFCControlButtons: View {
     let isReading: Bool
     let onStartReading: () -> Void
     let onStopReading: () -> Void
+    
     var body: some View {
         HStack(spacing: 15) {
             Button(action: {

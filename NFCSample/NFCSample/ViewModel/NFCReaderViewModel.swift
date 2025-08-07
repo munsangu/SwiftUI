@@ -4,112 +4,128 @@ import CoreNFC
 class NFCReaderViewModel: NSObject, ObservableObject {
     @Published var readingState: NFCReadingState = .idle
     @Published var nfcDataHistory: [NFCData] = []
-    
-    private var nfcSession: NFCNDEFReaderSession?
-    
+
+    private var nfcSession: NFCTagReaderSession?
+
     var canReadNFC: Bool {
-        return NFCNDEFReaderSession.readingAvailable
+        return NFCTagReaderSession.readingAvailable
     }
-    
+
     func startNFCReading() {
-        print("startNFCReading() called")
-        
+        print("startNFCReading() が呼び出されました")
+
         guard canReadNFC else {
-            print("NFC not available on this device")
-            readingState = .error("This device does not support NFC.")
+            print("このデバイスではNFCが利用できません")
+            readingState = .error("このデバイスはNFCをサポートしていません。")
             return
         }
-        
-        nfcSession = NFCNDEFReaderSession(
+
+        nfcSession = NFCTagReaderSession(
+            pollingOption: [.iso14443],
             delegate: self,
-            queue: nil,
-            invalidateAfterFirstRead: true
+            queue: nil
         )
-        nfcSession?.alertMessage = "Please scan your NFC tag"
+        nfcSession?.alertMessage = "NFCタグをスキャンしてください"
         nfcSession?.begin()
-        
+
         readingState = .reading
-        print("NFC session started")
+        print("NFCセッションが開始されました")
     }
-    
+
     func stopNFCReading() {
-        print("stopNFCReading() called")
-        
+        print("stopNFCReading() が呼び出されました")
         nfcSession?.invalidate()
         nfcSession = nil
-        
-        readingState = .idle
-        print("NFC session stopped")
+        if case .reading = readingState {
+            readingState = .idle
+        }
+        print("NFCセッションが停止しました")
     }
     
     func clearHistory() {
         nfcDataHistory.removeAll()
-        print("NFC history cleared")
+        print("NFC履歴が消去されました")
     }
-    
+
     private func addToHistory(_ nfcData: NFCData) {
         DispatchQueue.main.async {
             self.nfcDataHistory.insert(nfcData, at: 0)
-            print("Added to history: \(nfcData.payload)")
+            print("履歴に追加されました: \(nfcData.payload)")
         }
     }
 }
 
-extension NFCReaderViewModel: NFCNDEFReaderSessionDelegate {
-    func readerSession(
-        _ session: NFCNDEFReaderSession,
+extension NFCReaderViewModel: NFCTagReaderSessionDelegate {
+    func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) {
+        print("Session: \(session)")
+    }
+    // セッションが無効になった際に呼び出されるデリゲートメソッド
+    func tagReaderSession(
+        _ session: NFCTagReaderSession,
         didInvalidateWithError error: Error
     ) {
-        print("NFC session invalidated with error: \(error)")
-        
+        print("エラーによりNFCセッションが無効化されました: \(error.localizedDescription)")
         DispatchQueue.main.async {
-            if let nfcError = error as? NFCReaderError {
-                switch nfcError.code {
-                case .readerSessionInvalidationErrorUserCanceled:
-                    print("User canceled NFC session")
-                    self.readingState = .idle
-                case .readerSessionInvalidationErrorSessionTimeout:
-                    print("NFC session timeout")
-                    self.readingState = .error("Session timeout occurred.")
-                default:
-                    print("Other NFC error: \(error.localizedDescription)")
-                    self.readingState = .error("NFC reading error: \(error.localizedDescription)")
-                }
+            // ユーザーによるキャンセルエラーか確認
+            if let nfcError = error as? NFCReaderError, nfcError.code == .readerSessionInvalidationErrorUserCanceled {
+                self.readingState = .idle
+                print("ユーザーがNFCセッションをキャンセルしました")
             } else {
-                print("Unknown error: \(error.localizedDescription)")
-                self.readingState = .error("Unknown error: \(error.localizedDescription)")
+                self.readingState = .error("NFCエラー: \(error.localizedDescription)")
             }
         }
     }
-    
-    func readerSession(
-        _ session: NFCNDEFReaderSession,
-        didDetectNDEFs messages: [NFCNDEFMessage]
+
+    // タグが検出された際に呼び出されるデリゲートメソッド
+    func tagReaderSession(
+        _ session: NFCTagReaderSession,
+        didDetect tags: [NFCTag]
     ) {
-        print("NFC tags detected: \(messages.count) messages")
-        
-        var resultString = ""
-        
-        for message in messages {
-            print("Processing message with \(message.records.count) records")
-            for record in message.records {
-                if let payloadString = String(
-                    data: record.payload,
-                    encoding: .utf8
-                ) {
-                    print("Record payload: \(payloadString)")
-                    resultString += payloadString
-                }
-            }
+        print("NFCタグが検出されました: \(tags.count)個")
+        guard let firstTag = tags.first else {
+            session.invalidate(errorMessage: "タグが見つかりませんでした。")
+            return
         }
-        
-        let nfcData = NFCData(payload: resultString.isEmpty ? "Empty data" : resultString)
-        print("Created NFCData: \(nfcData.payload)")
-        
-        DispatchQueue.main.async {
-            self.readingState = .success(nfcData)
-            self.addToHistory(nfcData)
-            print("Successfully processed NFC data")
+
+        session.connect(to: firstTag) { (error: Error?) in
+            if let error = error {
+                session.invalidate(errorMessage: "接続に失敗しました: \(error.localizedDescription)")
+                return
+            }
+
+            var nfcData: NFCData?
+
+            switch firstTag {
+            case .miFare(let miFareTag):
+                let identifier = miFareTag.identifier.map { String(format: "%.2hhx", $0) }.joined()
+                print("MIFAREタグが検出されました。識別子: \(identifier)")
+                nfcData = NFCData(payload: "UID: \(identifier)", type: "MIFARE")
+
+            case .iso7816(let iso7816Tag):
+                let identifier = iso7816Tag.identifier.map { String(format: "%.2hhx", $0) }.joined()
+                print("ISO7816タグが検出されました。識別子: \(identifier)")
+                nfcData = NFCData(payload: "UID: \(identifier)", type: "ISO7816 (スマートカード)")
+
+            // 他のタグタイプも必要に応じて追加
+            // case .feliCa(let feliCaTag):
+            // ...
+            // case .iso15693(let iso15693Tag):
+            // ...
+                
+            default:
+                session.invalidate(errorMessage: "サポートされていないタグタイプです。")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if let data = nfcData {
+                    self.readingState = .success(data)
+                    self.addToHistory(data)
+                    print("NFCデータの処理に成功しました")
+                }
+                session.alertMessage = "スキャンに成功しました！"
+                session.invalidate()
+            }
         }
     }
 }

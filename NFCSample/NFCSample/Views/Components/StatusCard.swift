@@ -5,6 +5,7 @@ struct StatusCard: View {
     let title: String
     let message: String
     let color: Color
+    
     var body: some View {
         VStack(spacing: 8) {
             Image(systemName: icon)

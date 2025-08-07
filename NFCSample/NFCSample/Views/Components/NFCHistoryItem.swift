@@ -8,6 +8,7 @@ struct NFCHistoryItem: View {
         formatter.dateStyle = .none
         return formatter.string(from: nfcData.timestamp)
     }
+    
     var body: some View {
         HStack {
             VStack(

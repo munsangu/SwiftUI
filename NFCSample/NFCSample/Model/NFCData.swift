@@ -8,7 +8,7 @@ struct NFCData: Identifiable, Equatable {
     
     init(
         payload: String,
-        type: String = "NDEF"
+        type: String
     ) {
         self.payload = payload
         self.type = type
