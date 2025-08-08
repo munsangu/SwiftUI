@@ -21,7 +21,7 @@ class NFCReaderViewModel: NSObject, ObservableObject {
         }
 
         nfcSession = NFCTagReaderSession(
-            pollingOption: [.iso14443],
+            pollingOption: [.iso14443, .iso18092],
             delegate: self,
             queue: nil
         )
@@ -106,9 +106,13 @@ extension NFCReaderViewModel: NFCTagReaderSessionDelegate {
                 print("ISO7816タグが検出されました。識別子: \(identifier)")
                 nfcData = NFCData(payload: "UID: \(identifier)", type: "ISO7816 (スマートカード)")
 
-            // 他のタグタイプも必要に応じて追加
-            // case .feliCa(let feliCaTag):
-            // ...
+            case .feliCa(let feliCaTag):
+               let systemCode = String(format: "%02X%02X", feliCaTag.currentSystemCode[0], feliCaTag.currentSystemCode[1])
+               print("System Code: \(systemCode)")
+               let idm = feliCaTag.currentIDm.map { String(format: "%.2hhx", $0) }.joined()
+               print("FeliCaタグが検出されました。IDm: \(idm)")
+               nfcData = NFCData(payload: "IDm: \(idm)", type: "Felica")
+                
             // case .iso15693(let iso15693Tag):
             // ...
                 
