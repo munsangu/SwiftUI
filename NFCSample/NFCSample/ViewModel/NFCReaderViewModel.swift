@@ -111,7 +111,41 @@ extension NFCReaderViewModel: NFCTagReaderSessionDelegate {
                print("System Code: \(systemCode)")
                let idm = feliCaTag.currentIDm.map { String(format: "%.2hhx", $0) }.joined()
                print("FeliCaタグが検出されました。IDm: \(idm)")
-               nfcData = NFCData(payload: "IDm: \(idm)", type: "Felica")
+                let serviceCode: Data = Data([0x8B, 0x00])
+                let blockList: [Data] = [Data([0x80, 0x00])]
+
+                feliCaTag.readWithoutEncryption(serviceCodeList: [serviceCode], blockList: blockList) { statusFlag1, statusFlag2, blockData, error in
+                    if let error = error {
+                        session.invalidate(errorMessage: "FeliCa残高読み取りに失敗: \(error.localizedDescription)")
+                        return
+                    }
+
+                    guard statusFlag1 == 0x00, statusFlag2 == 0x00 else {
+                        session.invalidate(errorMessage: String(format: "FeliCaエラー: SF1=0x%02X SF2=0x%02X", statusFlag1, statusFlag2))
+                        return
+                    }
+
+                    guard let firstBlock = blockData.first, firstBlock.count >= 2 else {
+                        session.invalidate(errorMessage: "残高データが取得できませんでした。")
+                        return
+                    }
+
+                    let balance: UInt16 = firstBlock.withUnsafeBytes { ptr in
+                        return ptr.load(as: UInt16.self).littleEndian
+                    }
+
+                    print("FeliCa 電子マネー残高: \(balance)円")
+
+                    let payloadText = "IDm: \(idm), 残高: \(balance)円"
+                    let data = NFCData(payload: payloadText, type: "Felica")
+                    DispatchQueue.main.async {
+                        self.readingState = .success(data)
+                        self.addToHistory(data)
+                        print("NFCデータの処理に成功しました (残高含む)")
+                        session.alertMessage = "スキャンに成功しました！ 残高: \(balance)円"
+                        session.invalidate()
+                    }
+                }
                 
             // case .iso15693(let iso15693Tag):
             // ...
