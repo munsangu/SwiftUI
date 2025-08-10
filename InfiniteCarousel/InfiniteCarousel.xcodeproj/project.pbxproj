@@ -7,32 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		57C467E02E3E1F0E009DDE88 /* NFCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5794FE122E48B070005391C9 /* InfiniteCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		577725052E45C8CA00B2B440 /* Exceptions for "NFCSample" folder in "NFCSample" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 57C467DF2E3E1F0E009DDE88 /* NFCSample */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		57C467E22E3E1F0E009DDE88 /* NFCSample */ = {
+		5794FE142E48B070005391C9 /* InfiniteCarousel */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				577725052E45C8CA00B2B440 /* Exceptions for "NFCSample" folder in "NFCSample" target */,
-			);
-			path = NFCSample;
+			path = InfiniteCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		57C467DD2E3E1F0E009DDE88 /* Frameworks */ = {
+		5794FE0F2E48B070005391C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57C467D72E3E1F0E009DDE88 = {
+		5794FE092E48B070005391C9 = {
 			isa = PBXGroup;
 			children = (
-				57C467E22E3E1F0E009DDE88 /* NFCSample */,
-				57C467E12E3E1F0E009DDE88 /* Products */,
+				5794FE142E48B070005391C9 /* InfiniteCarousel */,
+				5794FE132E48B070005391C9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		57C467E12E3E1F0E009DDE88 /* Products */ = {
+		5794FE132E48B070005391C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57C467E02E3E1F0E009DDE88 /* NFCSample.app */,
+				5794FE122E48B070005391C9 /* InfiniteCarousel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57C467DF2E3E1F0E009DDE88 /* NFCSample */ = {
+		5794FE112E48B070005391C9 /* InfiniteCarousel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57C467EB2E3E1F0F009DDE88 /* Build configuration list for PBXNativeTarget "NFCSample" */;
+			buildConfigurationList = 5794FE1D2E48B071005391C9 /* Build configuration list for PBXNativeTarget "InfiniteCarousel" */;
 			buildPhases = (
-				57C467DC2E3E1F0E009DDE88 /* Sources */,
-				57C467DD2E3E1F0E009DDE88 /* Frameworks */,
-				57C467DE2E3E1F0E009DDE88 /* Resources */,
+				5794FE0E2E48B070005391C9 /* Sources */,
+				5794FE0F2E48B070005391C9 /* Frameworks */,
+				5794FE102E48B070005391C9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				57C467E22E3E1F0E009DDE88 /* NFCSample */,
+				5794FE142E48B070005391C9 /* InfiniteCarousel */,
 			);
-			name = NFCSample;
+			name = InfiniteCarousel;
 			packageProductDependencies = (
 			);
-			productName = NFCSample;
-			productReference = 57C467E02E3E1F0E009DDE88 /* NFCSample.app */;
+			productName = InfiniteCarousel;
+			productReference = 5794FE122E48B070005391C9 /* InfiniteCarousel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		57C467D82E3E1F0E009DDE88 /* Project object */ = {
+		5794FE0A2E48B070005391C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					57C467DF2E3E1F0E009DDE88 = {
+					5794FE112E48B070005391C9 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = 57C467DB2E3E1F0E009DDE88 /* Build configuration list for PBXProject "NFCSample" */;
+			buildConfigurationList = 5794FE0D2E48B070005391C9 /* Build configuration list for PBXProject "InfiniteCarousel" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 57C467D72E3E1F0E009DDE88;
+			mainGroup = 5794FE092E48B070005391C9;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 57C467E12E3E1F0E009DDE88 /* Products */;
+			productRefGroup = 5794FE132E48B070005391C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57C467DF2E3E1F0E009DDE88 /* NFCSample */,
+				5794FE112E48B070005391C9 /* InfiniteCarousel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		57C467DE2E3E1F0E009DDE88 /* Resources */ = {
+		5794FE102E48B070005391C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		57C467DC2E3E1F0E009DDE88 /* Sources */ = {
+		5794FE0E2E48B070005391C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		57C467E92E3E1F0F009DDE88 /* Debug */ = {
+		5794FE1B2E48B071005391C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -201,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		57C467EA2E3E1F0F009DDE88 /* Release */ = {
+		5794FE1C2E48B071005391C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,68 +244,54 @@
 			};
 			name = Release;
 		};
-		57C467EC2E3E1F0F009DDE88 /* Debug */ = {
+		5794FE1E2E48B071005391C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = NFCSample/NFCSample.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KDY5Q888G3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NFCSample/Info.plist;
-				INFOPLIST_KEY_NFCReaderUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hiroDaegu.NFCSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroDaegu.InfiniteCarousel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		57C467ED2E3E1F0F009DDE88 /* Release */ = {
+		5794FE1F2E48B071005391C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = NFCSample/NFCSample.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KDY5Q888G3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NFCSample/Info.plist;
-				INFOPLIST_KEY_NFCReaderUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hiroDaegu.NFCSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroDaegu.InfiniteCarousel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,25 +301,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57C467DB2E3E1F0E009DDE88 /* Build configuration list for PBXProject "NFCSample" */ = {
+		5794FE0D2E48B070005391C9 /* Build configuration list for PBXProject "InfiniteCarousel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57C467E92E3E1F0F009DDE88 /* Debug */,
-				57C467EA2E3E1F0F009DDE88 /* Release */,
+				5794FE1B2E48B071005391C9 /* Debug */,
+				5794FE1C2E48B071005391C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57C467EB2E3E1F0F009DDE88 /* Build configuration list for PBXNativeTarget "NFCSample" */ = {
+		5794FE1D2E48B071005391C9 /* Build configuration list for PBXNativeTarget "InfiniteCarousel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57C467EC2E3E1F0F009DDE88 /* Debug */,
-				57C467ED2E3E1F0F009DDE88 /* Release */,
+				5794FE1E2E48B071005391C9 /* Debug */,
+				5794FE1F2E48B071005391C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 57C467D82E3E1F0E009DDE88 /* Project object */;
+	rootObject = 5794FE0A2E48B070005391C9 /* Project object */;
 }
