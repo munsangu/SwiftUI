@@ -7,7 +7,7 @@ struct OTPView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text("Input OTP Code")
+                Text("Enter OTP Code")
                     .font(.title)
                     .bold()
                 
@@ -34,18 +34,35 @@ struct OTPView: View {
                             viewModel.otpCode = filtered
                         }
                     }
-                
-                Button("Okay") {
+            
+                Button("Request OTP") {
+                    viewModel.requestOTP()
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.blue)
+                .foregroundStyle(.white)
+                .cornerRadius(8)
+                .padding(.horizontal, 40)
+            
+                Button("Verify") {
                     viewModel.verifyOTP()
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(viewModel.isOTPComplete ? Color.blue : Color.gray)
-                .foregroundColor(.white)
+                .foregroundStyle(.white)
                 .cornerRadius(8)
                 .padding(.horizontal, 40)
                 .disabled(!viewModel.isOTPComplete)
                 
+                if !viewModel.issuedOTP.isEmpty {
+                    Text("Server OTP: \(viewModel.issuedOTP)")
+                        .font(.headline)
+                        .foregroundColor(.red)
+                        .padding(.bottom, 20)
+                }
+
             }
             .navigationDestination(isPresented: $viewModel.shouldNavigate) {
                 NextView()
@@ -57,7 +74,7 @@ struct OTPView: View {
                     isKeyboardFocused = true
                 }
             } message: {
-                Text("The OTP you entered is not valid.")
+                Text(viewModel.statusMessage)
             }
         }
     }

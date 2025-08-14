@@ -1,0 +1,50 @@
+// PHP
+
+header('Content-Type: application/json; charset=utf-8');
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: POST");
+
+// Request OTP
+$data = json_decode(file_get_contents('php://input'), true);
+$action = isset($data['action']) ? $data['action'] : 'request';
+$inputOTP = isset($data['otp']) ? $data['otp'] : null;
+
+$otpFile = __DIR__ . '/otp.txt';
+
+if ($action === 'request') {
+    $otp = random_int(100000, 999999);
+    $expires = time() + 300;
+
+    file_put_contents($otpFile, json_encode(['otp'=>$otp,'expires'=>$expires]));
+
+    echo json_encode([
+        'success' => true,
+        'message' => 'OTP issued',
+        'otp' => $otp,
+        'expiresAt' => $expires
+    ]);
+    exit;
+} elseif ($action === 'verify') {
+    if (!$inputOTP || !file_exists($otpFile)) {
+        echo json_encode(['success'=>false, 'error'=>'No OTP issued']);
+        exit;
+    }
+
+    $saved = json_decode(file_get_contents($otpFile), true);
+    if (time() > $saved['expires']) {
+        unlink($otpFile);
+        echo json_encode(['success'=>false, 'error'=>'OTP expired']);
+        exit;
+    }
+
+    if ((string)$inputOTP === (string)$saved['otp']) {
+        unlink($otpFile);
+        echo json_encode(['success'=>true, 'message'=>'OTP verified']);
+    } else {
+        echo json_encode(['success'=>false, 'error'=>'OTP mismatch']);
+    }
+    exit;
+} else {
+    echo json_encode(['success'=>false, 'error'=>'Invalid action']);
+}
