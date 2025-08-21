@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
+    <array>
+        <string>FE00</string>
+        <string>0003</string>
+        <string>003B</string>
+        <string>8008</string>
+        <string>8280</string>
+        <string>88B4</string>
+        <string>1004</string>
+        <string>1005</string>
+        <string>100B</string>
+        <string>110B</string>
+        <string>120B</string>
+        <string>4B8F</string>
+        <string>4B0F</string>
+        <string>130B</string>
+        <string>140B</string>
+        <string>150B</string>
+        <string>90B3</string>
+        <string>957A</string>
+        <string>8B00</string>
+        <string>8C80</string>
+        <string>0001</string>
+        <string>0002</string>
+        <string>0004</string>
+        <string>0005</string>
+        <string>0010</string>
+        <string>0020</string>
+        <string>1000</string>
+        <string>2000</string>
+        <string>3000</string>
+        <string>4000</string>
+        <string>5000</string>
+        <string>6000</string>
+        <string>0F01</string>
+        <string>0F02</string>
+        <string>2F00</string>
+        <string>2F01</string>
+    </array>
+</dict>
+</plist>
